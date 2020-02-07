@@ -2,9 +2,9 @@
 
 ## White Paper
 
-English:
+English:[White Paper](./EN/Nerve-WhitePaper-v1.00.pdf)
 
-中文版：
+中文版：[白皮书](./zh-CN/Nerve-WhitePaper-v1.00.pdf)
 
 ## Operation manual
 
