@@ -12,15 +12,19 @@ English:[White Paper](./EN/Nerve-WhitePaper-v1.00.pdf)
 
 ## Source code link
 
+[Repository](https://github.com/NerveNetwork/nerve)
+
 
 
 ## Technical documentation
 
 
 
+
+
 ## Others
 
-
+[Website](https://nerve.network/)
 
 
 
