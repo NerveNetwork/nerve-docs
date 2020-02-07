@@ -24,7 +24,7 @@ English:[White Paper](http://nervefiles.oss-us-west-1.aliyuncs.com/wp/Nerve_Whit
 
 ## Others
 
-[Website](https://nerve.network/)
+[Website](http://nerve.network/)
 
 
 
