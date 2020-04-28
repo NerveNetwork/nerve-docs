@@ -1,31 +1,32 @@
-# Nerve Network Documents Resources
-
-## White Paper
-
-English:[White Paper](http://nervefiles.oss-us-west-1.aliyuncs.com/wp/Nerve_WhitePaper_v1.00.pdf)
 
 
-## Operation manual
+# NerveNetwork Document Website
 
+Welcome to the NerveNetwork document library. With complete operation tutorials and development documents, you can quickly understand the ecology, technology and tools of NerveNetwork.
 
+## Getting started
 
-## Source code link
+Install dependencies:
 
-[Repository](https://github.com/NerveNetwork/nerve)
+```bash
+$ git git@github.com:NerveNetwork/nerve-docs.git
+$ cd nerve-docs
+$ yarn install
+```
 
+Run server:
 
+```bash
+$ yarn run dev
+```
 
-## Technical documentation
+Generate:
 
+```bash
+$ yarn run build
+```
 
+## Contributors
 
-
-
-## Others
-
-[Website](http://nerve.network/)
-
-
-
-
+Anyone is welcome to submit Pull Request, and the team will provide rewards according to the situation after adoption.
 
