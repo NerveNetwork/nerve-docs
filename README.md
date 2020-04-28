@@ -4,6 +4,8 @@
 
 Welcome to the NerveNetwork document library. With complete operation tutorials and development documents, you can quickly understand the ecology, technology and tools of NerveNetwork.
 
+You can view the content by visiting here: http://doc.nervedex.com/
+
 ## Getting started
 
 Install dependencies:
