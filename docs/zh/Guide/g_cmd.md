@@ -35,27 +35,10 @@
 
 Linux内核版本推荐使用 2.6.32及以上
 
-## 开始
+## 安装
 
-### **下载**
 
-- Nerve beta版本节点钱包GitHub地址：<https://github.com/NerveNetwork/nerve/releases>
-
-- Linux系统中下载beta版的节点钱包可以使用如下命令：
-
-  ```text
-  $ wget http://nerve-cn.oss-cn-hangzhou.aliyuncs.com/win/NERVE_Wallet_linux1.0.0.tar.gz
-  ```
-
-注：如果后续有其他版本，下载地址可能会不同。
-
-### 安装
-
-- 在Linux中解压已下载的文件
-
-  ```
-  $ tar -xvf NERVE_Wallet_linux1.0.0.tar.gz
-  ```
+[快速安装节点钱包](/zh/guide/g_docker_install.md)
 
 
 ### 运行
@@ -75,7 +58,7 @@ Linux内核版本推荐使用 2.6.32及以上
 
   进入钱包根目录，执行如下命令：
 
-  ```text
+  ```
   $ ./cmd
   ```
 
@@ -157,7 +140,7 @@ nerve>>> help create
 
 创建1个账户
 
-```text
+```
 nerve>>> create
 Please enter the new password(8-20 characters, the combination of letters and numbers).
 Enter your new password:********
@@ -167,7 +150,7 @@ Please confirm new password:********
 
 一次创建多个账户
 
-```text
+```
 nerve>>> create 2
 Please enter the new password(8-20 characters, the combination of letters and numbers).
 Enter your new password:********
@@ -188,13 +171,13 @@ Please confirm new password:********
 
 返回信息
 
-```text
+```
 The path to the backup file is /nerve/data/keystore/backup/TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG.keystore
 ```
 
 示例 备份一个有密码的账户
 
-```text
+```
 nerve>>> backup TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG /home/nerve/NERVE-Wallet-linux64-beta
 Please enter the password.
 Enter your password:********
@@ -219,7 +202,7 @@ Success
 
 示例
 
-```text
+```
 nerve>>> remove TNVTdN9iGbkjcWsUCEXSTT4yEPNDBSKsfXDxZ
 Please enter the password.
 Enter your password:********
@@ -244,7 +227,7 @@ Success
 
 示例
 
-```text
+```
 nerve>>> resetpwd  TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG
 Enter your old password:********
 Enter new password:**********
@@ -271,7 +254,7 @@ Success
 
 示例
 
-```text
+```
 nerve>>> setalias TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG alce
 Please enter the password.
 Enter your password:**********
@@ -298,7 +281,7 @@ txHash:efa00a925a8e5aebc9b12f8e5c6c016290d0245624308328c500a05f742384c8
 
 示例
 
-```text
+```
 nerve>>> importkeystore /home/nerve/TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG.keystore
 Please enter the password (password is between 8 and 20 inclusive of numbers and letters), If you do not want to set a password, return directly.
 Enter your password:********
@@ -321,7 +304,7 @@ TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG
 
 示例
 
-```text
+```
 nerve>>> import f3bf2993dcbf7a531504333f2b55a73a10eea2fb2739b96e1b3c7ac64455f770
 Please enter the password (password is between 8 and 20 inclusive of numbers and letters), If you do not want to set a password, return directly.
 Enter your password:********
@@ -357,7 +340,7 @@ TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG
 
 示例
 
-```text
+```
 nerve>>> getaccount TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG
 {
   "encryptedPrikeyHex" : "04d5c7a7068d1ad5d0e1974fe3bea7076e4f6eec434e4a2781ae1b7d9f4e2403b6cb2ba59cd600029aefa05ae464ff3f",
@@ -408,7 +391,7 @@ nerve>>> getaccount TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG
 
 示例 获取账户列表
 
-```text
+```
 nerve>>> getaccounts
 [ {
   "address" : "TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA",
@@ -447,7 +430,7 @@ f3bf2993dcbf7a531504333f2b55a73a10eea2fb2739b96e1b3c7ac64455f770
 
 示例
 
-```text
+```
 nerve>>> getprikey TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG
 Enter your account password**********
 f3bf2993dcbf7a531504333f2b55a73a10eea2fb2739b96e1b3c7ac64455f770
@@ -477,7 +460,7 @@ f3bf2993dcbf7a531504333f2b55a73a10eea2fb2739b96e1b3c7ac64455f770
 
 示例
 
-```text
+```
 nerve>>> getbalance TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 2 1
 {
   "available" : 200,
@@ -509,7 +492,7 @@ nerve>>> getbalance TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 2 1
 
 示例
 
-```text
+```
 nerve>>> transfer TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 200
 Enter your account password**********
 7a6c7758380781f4616ffb7e8b4571c4e383bc87fe59c4071239d2f8ccc65b3a
@@ -557,7 +540,7 @@ Enter your account password**********
 
 示例 查询转账交易
 
-```text
+```
 nerve>>> gettx efa00a925a8e5aebc9b12f8e5c6c016290d0245624308328c500a05f742384c8
 {
   "type" : 3,
@@ -607,7 +590,7 @@ nerve>>> gettx efa00a925a8e5aebc9b12f8e5c6c016290d0245624308328c500a05f742384c8
 
 示例 创建一个节点，押金200000NVT。
 
-```text
+```
 nerve>>>; createagent TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 200000
 Enter agent address password**********
 "dfcdd777ed75889fbea9756c3fb287766c4e511c6e37daa54deb29c17ccb72cc"
@@ -684,13 +667,13 @@ nerve>>>
 
 返回值
 
-```text
+```
 略 见示例
 ```
 
 示例
 
-```text
+```
 nerve>>> getagent dfcdd777ed75889fbea9756c3fb287766c4e511c6e37daa54deb29c17ccb72cc
 {
   "agentAddress" : "TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA",
@@ -724,13 +707,13 @@ nerve>>> getagent dfcdd777ed75889fbea9756c3fb287766c4e511c6e37daa54deb29c17ccb72
 
 返回值
 
-```text
+```
 略 见示例
 ```
 
 示例 获取第1页，共10条的节点列表
 
-```text
+```
 nerve>>> getagents 1 11
 [ {
   "agentAddress" : "TNVTdN9iCjr3Xy5yDPbEku2svp3QKPPNt7a5u",
@@ -787,7 +770,7 @@ nerve>>> getagents 1 11
 
 示例
 
-```text
+```
 nerve>>> deposit TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 2000
 Please enter the password.
 Enter your password:**********
@@ -815,7 +798,7 @@ cb74179c27c42a77f32df4773fe0821bc6d47b1435bfbf08331a744711ab3066
 
 示例
 
-```text
+```
 nerve>>> depositFixed TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 2000 THREE_MONTHS
 Please enter the password.
 Enter your password:********
@@ -841,7 +824,7 @@ ac3b3b783df158f1643fcddd570d258c8a09970706907fb910c951c9ae7a9662
 
 示例
 
-```text
+```
 nerve>>> withdraw TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA f5b2622a2ca23710a0a1f28bd0cb9c054220ba0719275abca5e4a7750dcf933a 
 Please enter the password.
 Enter your password:**********
@@ -868,7 +851,7 @@ Enter your password:**********
 
 示例
 
-```text
+```
 nerve>>> stopagent TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA
 Please enter the password.
 Enter your password:**********
@@ -909,7 +892,7 @@ Enter your password:**********
 
 示例
 
-```text
+```
 nerve>>> getlatestblockheader 
 {
   "hash" : "4eff3eaf57d43b0eebf00911973648df68bf7929fc31580e9e22aa818eb3dc24",//区块hash
@@ -953,7 +936,7 @@ nerve>>> getlatestblockheader
 
 示例 根据高度获取区块头
 
-```text
+```
 nerve>>> getblockheader 293
 {
   "hash" : "ae6504e17393a6a100af9747fa67ebc1b3f732d7ee13b4418211647d0707f147",
@@ -1000,7 +983,7 @@ nerve>>> getblockheader 293
 
 示例
 
-```text
+```
 nerve>>> network info
 {
   "localBestHeight" : 1423,
@@ -1025,7 +1008,7 @@ nerve>>> network info
 
 示例 根据高度获取区块
 
-```text
+```
 nerve>>> network nodes
 [ {
   "blockHash" : "a123610e655ce7bf7637f60904d5163a050119cb07e446cf0f9f3b2320aff676",
@@ -1093,13 +1076,13 @@ nerve>>> network nodes
 
 返回值:交易hash
 
-```text
+```
 "6fe7897431b65fc8e9f74da2dffbf120eac1497fcafd712147693aa3aef71a38"
 ```
 
 示例
 
-```text
+```
 nerve>>> createcrosstx TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG tNULSeBaMqpRQkHCs5ur3ck4LXEZB4qmmkPNo3 4 1 20
 Please enter the password.
 Enter your password:**********
@@ -1116,13 +1099,13 @@ Enter your password:**********
 
 返回值
 
-```text
+```
 0(0:Unconfirmed  1:MainNetConfirmed  2:Confirmed)
 ```
 
 示例
 
-```text
+```
 nerve>>> getcrosstxstate 6fe7897431b65fc8e9f74da2dffbf120eac1497fcafd712147693aa3aef71a38
 2(0:Unconfirmed  1:MainNetConfirmed  2:Confirmed)
 ```
@@ -1135,7 +1118,7 @@ nerve>>> getcrosstxstate 6fe7897431b65fc8e9f74da2dffbf120eac1497fcafd712147693aa
 
 示例
 
-```text
+```
 nerve>>> exit
 ```
 

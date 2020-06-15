@@ -35,26 +35,9 @@
 
 Linux kernel version 2.6.32 and above is recommended
 
-## Start
+## Install
 
-### **Download**
-- Node wallet of nerve beta version GitHub address: <https://github.com/nervenetwork/nerve/releases>
-
-- The following commands can be used to download the beta node wallet in Linux system:
-
-  ```text
-  $ wget http://nerve-cn.oss-cn-hangzhou.aliyuncs.com/win/NERVE_Wallet_linux1.0.0.tar.gz
-  ```
-
-Note: if there are other versions later, the download address may be different.
-
-### Install
-
-- Extracting downloaded files in Linux
-
-  ```
-  $ tar -xvf NERVE_Wallet_linux1.0.0.tar.gz
-  ```
+[Quickly install node wallet](/guide/g_docker_install.md)
 
 
 ### RUN
@@ -74,7 +57,7 @@ Note: if there are other versions later, the download address may be different.
 
 Enter the wallet root directory and execute the following command:
 
-  ```text
+  ```
   $ ./cmd
   ```
 
@@ -137,7 +120,7 @@ Example
 
 Create a account
 
-```text
+```
 nerve>>> create
 Please enter the new password(8-20 characters, the combination of letters and numbers).
 Enter your new password:********
@@ -147,7 +130,7 @@ Please confirm new password:********
 
 Create multiple accounts
 
-```text
+```
 nerve>>> create 2
 Please enter the new password(8-20 characters, the combination of letters and numbers).
 Enter your new password:********
@@ -168,13 +151,13 @@ Backup address keystore,a file with the name of the address and the extension .k
 
 Return
 
-```text
+```
 The path to the backup file is /nerve/data/keystore/backup/TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG.keystore
 ```
 
 Example backup address
 
-```text
+```
 nerve>>> backup TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG /home/nerve/NERVE-Wallet-linux64-beta
 Please enter the password.
 Enter your password:********
@@ -199,7 +182,7 @@ Success
 
 Example
 
-```text
+```
 nerve>>> remove TNVTdN9iGbkjcWsUCEXSTT4yEPNDBSKsfXDxZ
 Please enter the password.
 Enter your password:********
@@ -224,7 +207,7 @@ Success
 
 Example
 
-```text
+```
 nerve>>> resetpwd  TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG
 Enter your old password:********
 Enter new password:**********
@@ -251,7 +234,7 @@ Return tx hash
 
 Example
 
-```text
+```
 nerve>>> setalias TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG alce
 Please enter the password.
 Enter your password:**********
@@ -278,7 +261,7 @@ Return address
 
 Example
 
-```text
+```
 nerve>>> importkeystore /home/nerve/TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG.keystore
 Please enter the password (password is between 8 and 20 inclusive of numbers and letters), If you do not want to set a password, Return directly.
 Enter your password:********
@@ -301,7 +284,7 @@ Import the address private key to generate a local address. If the address alrea
 
 Example
 
-```text
+```
 nerve>>> import f3bf2993dcbf7a531504333f2b55a73a10eea2fb2739b96e1b3c7ac64455f770
 Please enter the password (password is between 8 and 20 inclusive of numbers and letters), If you do not want to set a password, Return directly.
 Enter your password:********
@@ -337,7 +320,7 @@ Return
 
 Example
 
-```text
+```
 nerve>>> getaccount TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG
 {
   "encryptedPrikeyHex" : "04d5c7a7068d1ad5d0e1974fe3bea7076e4f6eec434e4a2781ae1b7d9f4e2403b6cb2ba59cd600029aefa05ae464ff3f",
@@ -388,7 +371,7 @@ Return information, output address collection
 
 Example 
 
-```text
+```
 nerve>>> getaccounts
 [ {
   "address" : "TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA",
@@ -427,7 +410,7 @@ f3bf2993dcbf7a531504333f2b55a73a10eea2fb2739b96e1b3c7ac64455f770
 
 Example
 
-```text
+```
 nerve>>> getprikey TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG
 Enter your account password**********
 f3bf2993dcbf7a531504333f2b55a73a10eea2fb2739b96e1b3c7ac64455f770
@@ -457,7 +440,7 @@ Return
 
 Example
 
-```text
+```
 nerve>>> getbalance TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 2 1
 {
   "available" : 200,
@@ -489,7 +472,7 @@ Return tx hash
 
 Example
 
-```text
+```
 nerve>>> transfer TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 200
 Enter your account password**********
 7a6c7758380781f4616ffb7e8b4571c4e383bc87fe59c4071239d2f8ccc65b3a
@@ -537,7 +520,7 @@ Return tx detail
 
 Example
 
-```text
+```
 nerve>>> gettx efa00a925a8e5aebc9b12f8e5c6c016290d0245624308328c500a05f742384c8
 {
   "type" : 3,
@@ -587,7 +570,7 @@ Return agent hash
 
 Example
 
-```text
+```
 nerve>>> createagent TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 200000
 Enter agent address password**********
 "dfcdd777ed75889fbea9756c3fb287766c4e511c6e37daa54deb29c17ccb72cc"
@@ -667,13 +650,13 @@ Query specified agent information according to agentHash
 
 Return
 
-```text
+```
 Pls check the example below
 ```
 
 Example
 
-```text
+```
 nerve>>> getagent dfcdd777ed75889fbea9756c3fb287766c4e511c6e37daa54deb29c17ccb72cc
 {
   "agentAddress" : "TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA",
@@ -709,13 +692,13 @@ Query the list of consensus agents
 
 Return 
 
-```text
+```
 
 ```
 
 Example (Get a list of 10 agents on page 1)
 
-```text
+```
 nerve>>> getagents 1 10
 [ {
   "agentAddress" : "TNVTdN9iCjr3Xy5yDPbEku2svp3QKPPNt7a5u",
@@ -772,7 +755,7 @@ Return tx hash.
 
 Example
 
-```text
+```
 nerve>>> deposit TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 2000
 Please enter the password.
 Enter your password:**********
@@ -800,7 +783,7 @@ Return tx hash
 
 Example
 
-```text
+```
 nerve>>> depositFixed TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 2000 THREE_MONTHS
 Please enter the password.
 Enter your password:********
@@ -826,7 +809,7 @@ Return tx hash
 
 Example
 
-```text
+```
 nerve>>> withdraw TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA f5b2622a2ca23710a0a1f28bd0cb9c054220ba0719275abca5e4a7750dcf933a 
 Please enter the password.
 Enter your password:**********
@@ -853,7 +836,7 @@ Rerun tx hash
 
 Example
 
-```text
+```
 nerve>>> stopagent TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA
 Please enter the password.
 Enter your password:**********
@@ -893,7 +876,7 @@ Return
 
 Example
 
-```text
+```
 nerve>>> getlatestblockheader 
 {
   "hash" : "4eff3eaf57d43b0eebf00911973648df68bf7929fc31580e9e22aa818eb3dc24",hash
@@ -937,7 +920,7 @@ Pls check the example below
 
 Example
 
-```text
+```
 nerve>>> getblockheader 293
 {
   "hash" : "ae6504e17393a6a100af9747fa67ebc1b3f732d7ee13b4418211647d0707f147",
@@ -984,7 +967,7 @@ Return
 
 Example
 
-```text
+```
 nerve>>> network info
 {
   "localBestHeight" : 1423,
@@ -1009,7 +992,7 @@ Pls check the example below
 
 Example
 
-```text
+```
 nerve>>> network nodes
 [ {
   "blockHash" : "a123610e655ce7bf7637f60904d5163a050119cb07e446cf0f9f3b2320aff676",
@@ -1077,13 +1060,13 @@ nerve>>> network nodes
 
 Return
 
-```text
+```
 "6fe7897431b65fc8e9f74da2dffbf120eac1497fcafd712147693aa3aef71a38"
 ```
 
 Example
 
-```text
+```
 nerve>>> createcrosstx TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG tNULSeBaMqpRQkHCs5ur3ck4LXEZB4qmmkPNo3 4 1 20
 Please enter the password.
 Enter your password:**********
@@ -1100,13 +1083,13 @@ Enter your password:**********
 
 Return
 
-```text
+```
 0(0:Unconfirmed  1:MainNetConfirmed  2:Confirmed)
 ```
 
 Example
 
-```text
+```
 nerve>>> getcrosstxstate 6fe7897431b65fc8e9f74da2dffbf120eac1497fcafd712147693aa3aef71a38
 2(0:Unconfirmed  1:MainNetConfirmed  2:Confirmed)
 ```
@@ -1119,7 +1102,7 @@ Exit the command line program that operates the wallet, and will not exit the wa
 
 Example
 
-```text
+```
 nerve>>> exit
 ```
 
