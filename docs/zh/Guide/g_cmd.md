@@ -1121,11 +1121,3 @@ nerve>>> getcrosstxstate 6fe7897431b65fc8e9f74da2dffbf120eac1497fcafd712147693aa
 ```
 nerve>>> exit
 ```
-
-
-
-
-
-
-
-witdep	
