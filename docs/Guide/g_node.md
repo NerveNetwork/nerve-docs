@@ -1,0 +1,2 @@
+# Full node installation manual
+

@@ -1,0 +1,2 @@
+# Staking mechanism introduction
+

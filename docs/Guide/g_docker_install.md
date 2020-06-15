@@ -1,0 +1,197 @@
+# Quickly Install Node Wallet
+
+## Install docker under Linux
+
+### Log in to the system as a user with root privileges and view the system kernel version
+
+The return value is greater than 3.10
+
+Command: `uname -r`
+
+```
+[root@hope-2 /]# uname -r
+3.10.0-957.27.2.el7.x86_64
+```
+
+### Make sure yum is the latest version
+
+Command: `yum update`
+
+### Add yum repository
+
+```
+tee /etc/yum.repos.d/docker.repo <<-'EOF'
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+EOF
+```
+
+### Install docker
+
+Command: `yum install -y docker-engine`
+
+After the installation is successful, use the docker version command to check whether the installation is successful
+
+### Start docker
+
+Command: `systemctl start docker.service`
+
+### Check success
+
+Use the command docker version to view, and the Client and Server appear indicating that the docker installation is started successfully
+
+```
+[root@hope-2 /]# docker version
+Client: Docker Engine-Community
+ Version: 19.03.11
+ API version: 1.40
+ Go version: go1.13.10
+ Git commit: 42e35e61f3
+ Built: Mon Jun 1 09:13:48 2020
+ OS/Arch: linux/amd64
+ Experimental: false
+
+Server: Docker Engine-Community
+ Engine:
+  Version: 19.03.11
+  API version: 1.40 (minimum version 1.12)
+  Go version: go1.13.10
+  Git commit: 42e35e61f3
+  Built: Mon Jun 1 09:12:26 2020
+  OS/Arch: linux/amd64
+  Experimental: false
+ containerd:
+  Version: 1.2.13
+  GitCommit: 7ad184331fa3e55e52b890ea95e65ba581ae3429
+ runc:
+  Version: 1.0.0-rc10
+  GitCommit: dc9208a3303feef5b3839f4323d9beb36df0a9dd
+ docker-init:
+  Version: 0.18.0
+  GitCommit: fec3683
+```
+
+
+
+### Set to start automatically at boot
+
+Command: `sudo systemctl enable docker`
+
+## Install docker under Windows
+
+[Reference link](https://docs.microsoft.com/zh-cn/virtualization/windowscontainers/quick-start/set-up-environment?tabs=Windows-Server)
+
+## Start Nerve node wallet
+
+### Wallet startup
+
+The node wallet has the most basic functions required for the operation of the main chain, and includes the nerve-api (http development interface) module. Users can only interact with the wallet through the command line.
+
+Run the command (just copy and execute):
+
+```
+docker run \
+       --name nerve-wallet \
+       -d \
+       -p 17001:17001 \
+       -p 17002:17002 \
+       -p 17004:17004 \
+       -v `pwd`/data:/data \
+       -v `pwd`/logs:/nuls/Logs \
+       nervenetwork/nerve-wallet-node:beta-1.0.0-fe2eb1b
+```
+
+17001 Nerve chain protocol communication port (required)
+
+17002 Nerve chain cross-chain protocol port (required)
+
+17004 http api interface using port (optional)
+
+/nuls/data data storage directory
+
+/nuls/Logs Log storage directory
+
+PS: Be sure to enable the above ports in the server firewall settings, otherwise it will affect the block synchronization
+
+### Enter the wallet and wallet management commands
+
+Enter the wallet command line:
+
+```
+docker exec -it nerve-wallet cmd
+```
+
+Enter the wallet directory:
+
+```
+docker exec -it nerve-wallet bash
+```
+
+Check the module startup status:
+
+```
+docker exec -it nerve-wallet check-status
+```
+
+Stop wallet:
+
+```
+docker stop nerve-wallet
+```
+
+Start the wallet:
+
+```
+docker start nerve-wallet
+```
+
+Restart the wallet:
+
+```
+docker restart nerve-wallet
+```
+
+## docker-compose installation
+
+After the docker installation starts successfully, execute the following two commands to install docker-compose and grant permissions:
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/ bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+After the installation is successful, create a new file docker-compose.yml in a certain directory (optional), write the following code and save it:
+
+```
+version: '3.1'
+services:
+  nerve:
+    image: nervenetwork/nerve-wallet-node:beta-1.0.0-fe2eb1b
+    restart: always
+    container_name: nerve-wallet
+    ports:
+      # Port Mapping
+      -17001:17001
+      -17002:17002
+      -17004:17004
+    volumes:
+      # Database directory mapping
+      -./data:/nuls/data
+      -./logs:/nuls/Logs
+    environment:
+      TIME_ZONE: Asia/Shanghai
+```
+
+Wallet start and stop commands:
+
+Start: `docker-compose up -d`
+
+Stop: `docker-compose down`
+
+## Nerve node wallet latest docker image view
+
+[Click here to view! ](https://hub.docker.com/r/nervenetwork/nerve-wallet-node/tags) Get the latest version information, change the version number in the command to execute.
