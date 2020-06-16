@@ -6,7 +6,7 @@
 
 返回值大于3.10即可
 
-命令：`uname -r`
+命令：uname -r
 
 ```
 [root@hope-2 /]# uname -r
@@ -15,7 +15,7 @@
 
 ### 确保yum为最新版本
 
-命令：`yum update`
+命令：yum update
 
 ### 添加yum仓库
 
@@ -32,13 +32,18 @@ EOF
 
 ### 安装docker
 
-命令：`yum install -y docker-engine `
+分别执行以下用例进行安装：
 
-安装成功之后，用docker version命令查看是否安装成功
+```
+yum install -y yum-utils device-mapper-persistent-data lvm2
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+yum makecache fast
+yum -y install docker-ce
+```
 
 ### 启动docker
 
-命令：`systemctl start docker.service `
+命令：systemctl start docker.service 
 
 ### 检查是否成功
 
@@ -79,7 +84,7 @@ Server: Docker Engine - Community
 
 ### 设置开机自动启动
 
-命令：`sudo systemctl enable docker`
+命令：sudo systemctl enable docker
 
 ## Windows下安装docker
 
@@ -91,7 +96,7 @@ Server: Docker Engine - Community
 
 节点钱包带有主链运行所需的最基础功能，并包括nerve-api（http的开发接口）模块，用户只能通过命令行与钱包进行交互。
 
-运行命令（复制执行即可）：
+运行命令：
 
 ```
 docker run \
@@ -102,7 +107,7 @@ docker run \
        -p 17004:17004 \
        -v `pwd`/data:/data \
        -v `pwd`/logs:/nuls/Logs \
-       nervenetwork/nerve-wallet-node:beta-1.0.0-fe2eb1b
+       nervenetwork/nerve-wallet-node:beta-1.0.0
 ```
 
 17001 Nerve链协议通信端口（必选）
@@ -155,7 +160,7 @@ docker start nerve-wallet
 docker restart nerve-wallet
 ```
 
-## docker-compose安装
+## docker-compose安装启动
 
 docker安装启动成功之后，执行下面两条命令安装docker-compose并赋予权限：
 
@@ -170,7 +175,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 version: '3.1'
 services:
   nerve:
-    image: nervenetwork/nerve-wallet-node:beta-1.0.0-fe2eb1b
+    image: nervenetwork/nerve-wallet-node:beta-1.0.0
     restart: always
     container_name: nerve-wallet
     ports:
@@ -188,10 +193,33 @@ services:
 
 钱包启动、停止命令：
 
-启动：`docker-compose up -d`
+启动：docker-compose up -d
 
-停止：`docker-compose down`ß
+停止：docker-compose down
 
-## Nerve节点钱包最新docker镜像查看
+## Nerve节点钱包更新
 
-[点这里查看！](https://hub.docker.com/r/nervenetwork/nerve-wallet-node/tags)获取最新的版本信息，更改命令中的版本号执行。
+首先在服务器上停止已运行的镜像
+
+```
+docker stop nerve-wallet
+```
+
+使用命令查看钱包的容器并且根据容器ID删除该容器
+
+```
+[root@c-7 ~]# docker ps -a
+CONTAINER ID        IMAGE                    COMMAND                  CREATED             STATUS                        PORTS               NAMES
+9b5f87f013fa        a26aa7ced583             "/usr/local/bin/entr…"   15 hours ago        Exited (137) 55 seconds ago                       nerve-wallet
+
+[root@c-7 ~]# docker rm 9b5f87f013fa
+```
+
+重新拉取镜像
+
+```
+docker pull nervenetwork/nerve-wallet-node:beta-1.0.0
+```
+
+再次启动nerve节点钱包即可，重复三、四操作（如果需要清数据，请删除root目录下的data、logs目录）
+

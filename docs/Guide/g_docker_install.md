@@ -1,4 +1,4 @@
-# Quickly Install Node Wallet
+# Quickly install node wallet
 
 ## Install docker under Linux
 
@@ -6,7 +6,7 @@
 
 The return value is greater than 3.10
 
-Command: `uname -r`
+Command: uname -r
 
 ```
 [root@hope-2 /]# uname -r
@@ -15,7 +15,7 @@ Command: `uname -r`
 
 ### Make sure yum is the latest version
 
-Command: `yum update`
+Command: yum update
 
 ### Add yum repository
 
@@ -32,17 +32,22 @@ EOF
 
 ### Install docker
 
-Command: `yum install -y docker-engine`
+Perform the following use cases to install separately:
 
-After the installation is successful, use the docker version command to check whether the installation is successful
+```
+yum install -y yum-utils device-mapper-persistent-data lvm2
+yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+yum makecache fast
+yum -y install docker-ce
+```
 
 ### Start docker
 
-Command: `systemctl start docker.service`
+Command: systemctl start docker.service
 
 ### Check success
 
-Use the command docker version to view, and the Client and Server appear indicating that the docker installation is started successfully
+Use the command docker version to view, and the Client and Server appear indicating that the docker installation is started
 
 ```
 [root@hope-2 /]# docker version
@@ -79,7 +84,7 @@ Server: Docker Engine-Community
 
 ### Set to start automatically at boot
 
-Command: `sudo systemctl enable docker`
+Command: sudo systemctl enable docker
 
 ## Install docker under Windows
 
@@ -91,7 +96,7 @@ Command: `sudo systemctl enable docker`
 
 The node wallet has the most basic functions required for the operation of the main chain, and includes the nerve-api (http development interface) module. Users can only interact with the wallet through the command line.
 
-Run the command (just copy and execute):
+Run the command:
 
 ```
 docker run \
@@ -102,7 +107,7 @@ docker run \
        -p 17004:17004 \
        -v `pwd`/data:/data \
        -v `pwd`/logs:/nuls/Logs \
-       nervenetwork/nerve-wallet-node:beta-1.0.0-fe2eb1b
+       nervenetwork/nerve-wallet-node:beta-1.0.0
 ```
 
 17001 Nerve chain protocol communication port (required)
@@ -155,7 +160,7 @@ Restart the wallet:
 docker restart nerve-wallet
 ```
 
-## docker-compose installation
+## docker-compose installation start
 
 After the docker installation starts successfully, execute the following two commands to install docker-compose and grant permissions:
 
@@ -164,13 +169,13 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 ```
 
-After the installation is successful, create a new file docker-compose.yml in a certain directory (optional), write the following code and save it:
+After the installation is successful, create a new file docker-compose.yml in a directory (optional), write the following code and save it:
 
 ```
 version: '3.1'
 services:
   nerve:
-    image: nervenetwork/nerve-wallet-node:beta-1.0.0-fe2eb1b
+    image: nervenetwork/nerve-wallet-node:beta-1.0.0
     restart: always
     container_name: nerve-wallet
     ports:
@@ -188,10 +193,32 @@ services:
 
 Wallet start and stop commands:
 
-Start: `docker-compose up -d`
+Start: docker-compose up -d
 
-Stop: `docker-compose down`
+Stop: docker-compose down
 
-## Nerve node wallet latest docker image view
+## Nerve node wallet update
 
-[Click here to view! ](https://hub.docker.com/r/nervenetwork/nerve-wallet-node/tags) Get the latest version information, change the version number in the command to execute.
+First stop the running image on the server
+
+```
+docker stop nerve-wallet
+```
+
+Use the command to view the wallet container and delete the container according to the container ID
+
+```
+[root@c-7 ~]# docker ps -a
+CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES
+9b5f87f013fa a26aa7ced583 "/usr/local/bin/entr…" 15 hours ago Exited (137) 55 seconds ago nerve-wallet
+
+[root@c-7 ~]# docker rm 9b5f87f013fa
+```
+
+Re-pull the image
+
+```
+docker pull nervenetwork/nerve-wallet-node:beta-1.0.0
+```
+
+Just start the nerve node wallet again, and repeat the three and four operations (if you need to clear the data, please delete the data and logs directories under the root directory)
