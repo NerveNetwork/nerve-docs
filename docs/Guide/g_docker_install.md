@@ -1,5 +1,55 @@
 # Quickly install node wallet
 
+## Preparation
+
+### Server hardware configuration
+
+**The server for establishing Nerve nodes is not less than the following configuration:**
+
+| CPU | Memory | Hard Disk | Broadband |
+| ----------- | ---- | -------- | ------- |
+| Quad-core 3.0GHz | 16G | 128G hard drive | 20M uplink |
+
+**Recommended configuration:**
+
+| CPU | Memory | Hard Disk | Broadband |
+| ----------- | ---- | -------- | -------- |
+| Eight-core 3.0GHz | 32G | 256G hard disk | 100M uplink |
+
+### Understand node classification
+
+#### Virtual bank node:
+
+**Consensus reward:** It is 2 times the block reward of POS income + handling fee
+
+To meet the conditions:
+- Top 15 NVT deposit
+- The block address holds a certain amount of heterogeneous chain assets (the currently connected heterogeneous chain is Ethereum, it is recommended to hold at least 0.1ETH)
+- Provide stable server equipment
+- Block transaction and block verification
+- Maintain cross-chain assets and proposals
+  
+
+#### Consensus node:
+
+**Consensus Reward:** It is 1.73 times of POS revenue block reward + handling fee
+
+To meet the conditions:
+- Top 35 NVT deposit
+- Provide stable server equipment
+- Block transaction and block verification
+  
+
+
+#### Ordinary node:
+
+**Consensus reward:** Equal to current POS
+
+To meet the conditions:
+- deposit at least 20W NVT
+- Provide stable server equipment
+- Participate in block broadcasting
+
 ## Install docker under Linux
 
 ### Log in to the system as a user with root privileges and view the system kernel version

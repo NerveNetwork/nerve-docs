@@ -18,9 +18,8 @@ Nerve网络目前为Beta版本，因此接入的也是ETH的测试网络，因�
 ## 将ETH转入Nerve网络
 
 进入Nerve的[测试网轻钱包](http://beta.wallet.nerve.network/)，在转账页面，找到ETH，点击【跨链转入】，即可看到入口，跨链转入ETH将会分为两个步骤
-点击【获取Ether】，即可领取测试的ETH
 
-![](./g_eth/4.jpg)
+![](./g_eth/5.jpg)
 
 **第一步：** 将ETH转入已绑定的以太坊账户
 

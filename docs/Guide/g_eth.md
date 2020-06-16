@@ -18,9 +18,8 @@ Click[Get Ether]to receive test ETH
 ## Transfer ETH to Nerve network
 
 Enter Nerve's [Testnet Light Wallet](http://beta.wallet.nerve.network/), on the transfer page, find ETH, click [cross-chain transfer], you can see the entrance, cross-chain transfer to ETH Will be divided into two steps
-Click【Get Ether】to receive test ETH
 
-![](./g_eth/4.jpg)
+![](./g_eth/5.jpg)
 
 **Step 1:** Transfer ETH to the bound Ethereum account
 
