@@ -23,11 +23,11 @@
 **Consensus reward:** It is 2 times the block reward of POS income + handling fee
 
 To meet the conditions:
-- Top 15 NVT deposit
-- The block address holds a certain amount of heterogeneous chain assets (the currently connected heterogeneous chain is Ethereum, it is recommended to hold at least 0.1ETH)
-- Provide stable server equipment
-- Block transaction and block verification
-- Maintain cross-chain assets and proposals
+-Top 15 NVT pledges
+-The block address holds a certain amount of assets of the heterogeneous chain (the currently connected heterogeneous chain is Ethereum, it is recommended to hold at least 0.1ETH)
+-Provide stable server equipment
+-Block transaction and block verification
+-Maintain cross-chain assets and proposals
   
 
 #### Consensus node:
@@ -35,20 +35,21 @@ To meet the conditions:
 **Consensus Reward:** It is 1.73 times of POS revenue block reward + handling fee
 
 To meet the conditions:
-- Top 35 NVT deposit
-- Provide stable server equipment
-- Block transaction and block verification
+-Top 35 NVT pledges
+-Provide stable server equipment
+-Block transaction and block verification
   
 
 
 #### Ordinary node:
 
-**Consensus reward:** Equal to current POS
+**Consensus reward:** equal to current POS
 
 To meet the conditions:
-- deposit at least 20W NVT
-- Provide stable server equipment
-- Participate in block broadcasting
+-Pledge at least 20W NVT
+-Provide stable server equipment
+-Participate in block broadcasting
+
 
 ## Install docker under Linux
 
@@ -97,7 +98,7 @@ Command: systemctl start docker.service
 
 ### Check success
 
-Use the command docker version to view, and the Client and Server appear indicating that the docker installation is started
+Use the command docker version to view, and the Client and Server appear indicating that the docker installation is started successfully
 
 ```
 [root@hope-2 /]# docker version
@@ -140,9 +141,11 @@ Command: sudo systemctl enable docker
 
 [Reference link](https://docs.microsoft.com/zh-cn/virtualization/windowscontainers/quick-start/set-up-environment?tabs=Windows-Server)
 
-## Start Nerve node wallet
 
-### Wallet startup
+
+**PS: There are currently two ways to start the Nerve node wallet, the first is to use the command to start directly, and the other is to use docker-compose to start. **
+
+## The first way to start Nerve node wallet
 
 The node wallet has the most basic functions required for the operation of the main chain, and includes the nerve-api (http development interface) module. Users can only interact with the wallet through the command line.
 
@@ -155,7 +158,7 @@ docker run \
        -p 17001:17001 \
        -p 17002:17002 \
        -p 17004:17004 \
-       -v `pwd`/data:/data \
+       -v `pwd`/data:/nuls/data \
        -v `pwd`/logs:/nuls/Logs \
        nervenetwork/nerve-wallet-node:beta-1.0.0
 ```
@@ -172,7 +175,56 @@ docker run \
 
 PS: Be sure to enable the above ports in the server firewall settings, otherwise it will affect the block synchronization
 
-### Enter the wallet and wallet management commands
+## The second way docker-compose install and start Nerve node wallet
+
+After the docker installation starts successfully, execute the following two commands to install docker-compose and grant permissions:
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/ bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+After the installation is successful, create a new file docker-compose.yml in a directory (optional), write the following code and save it:
+
+```
+version: '3.1'
+services:
+  nerve:
+    image: nervenetwork/nerve-wallet-node:beta-1.0.0
+    restart: always
+    container_name: nerve-wallet
+    ports:
+      # Port Mapping
+      -17001:17001
+      -17002:17002
+      -17004:17004
+    volumes:
+      # Database directory mapping
+      -./data:/nuls/data
+      -./logs:/nuls/Logs
+    environment:
+      TIME_ZONE: Asia/Shanghai
+```
+
+17001 Nerve chain protocol communication port (required)
+
+17002 Nerve chain cross-chain protocol port (required)
+
+17004 http api interface using port (optional)
+
+/nuls/data data storage directory
+
+/nuls/Logs Log storage directory
+
+PS: Be sure to enable the above ports in the server firewall settings, otherwise it will affect the block synchronization
+
+Wallet start and stop commands:
+
+Start: docker-compose up -d
+
+Stop: docker-compose down
+
+## Enter the wallet command line and wallet management commands
 
 Enter the wallet command line:
 
@@ -210,42 +262,7 @@ Restart the wallet:
 docker restart nerve-wallet
 ```
 
-## docker-compose installation start
-
-After the docker installation starts successfully, execute the following two commands to install docker-compose and grant permissions:
-
-```
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/ bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-```
-
-After the installation is successful, create a new file docker-compose.yml in a directory (optional), write the following code and save it:
-
-```
-version: '3.1'
-services:
-  nerve:
-    image: nervenetwork/nerve-wallet-node:beta-1.0.0
-    restart: always
-    container_name: nerve-wallet
-    ports:
-      # Port Mapping
-      -17001:17001
-      -17002:17002
-      -17004:17004
-    volumes:
-      # Database directory mapping
-      -./data:/nuls/data
-      -./logs:/nuls/Logs
-    environment:
-      TIME_ZONE: Asia/Shanghai
-```
-
-Wallet start and stop commands:
-
-Start: docker-compose up -d
-
-Stop: docker-compose down
+##
 
 ## Nerve node wallet update
 
@@ -271,4 +288,4 @@ Re-pull the image
 docker pull nervenetwork/nerve-wallet-node:beta-1.0.0
 ```
 
-Just start the nerve node wallet again, and repeat the three and four operations (if you need to clear the data, please delete the data and logs directories under the root directory)
+Just start the nerve node wallet again, choose to repeat the first or second startup method according to different startup methods (if you need to clear the data, please delete the data and logs directories under the root directory)

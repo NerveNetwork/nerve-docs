@@ -141,9 +141,11 @@ Server: Docker Engine - Community
 
 [参考链接](https://docs.microsoft.com/zh-cn/virtualization/windowscontainers/quick-start/set-up-environment?tabs=Windows-Server)
 
-## 启动Nerve节点钱包
 
-### 钱包启动
+
+**PS：目前提供两种方式启动Nerve节点钱包，第一种是使用命令直接启动，另一种是使用docker-compose启动。**
+
+## 第一种方式启动Nerve节点钱包
 
 节点钱包带有主链运行所需的最基础功能，并包括nerve-api（http的开发接口）模块，用户只能通过命令行与钱包进行交互。
 
@@ -156,7 +158,7 @@ docker run \
        -p 17001:17001 \
        -p 17002:17002 \
        -p 17004:17004 \
-       -v `pwd`/data:/data \
+       -v `pwd`/data:/nuls/data \
        -v `pwd`/logs:/nuls/Logs \
        nervenetwork/nerve-wallet-node:beta-1.0.0
 ```
@@ -173,7 +175,56 @@ docker run \
 
 PS：请务必在服务器防火墙设置开启以上端口，否则会影响区块同步
 
-### 进入钱包及钱包管理命令
+## 第二种方式docker-compose安装启动Nerve节点钱包
+
+docker安装启动成功之后，执行下面两条命令安装docker-compose并赋予权限：
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+安装成功之后，在某个目录（随意）下新建一个文件docker-compose.yml，写入下面的代码并保存：
+
+```
+version: '3.1'
+services:
+  nerve:
+    image: nervenetwork/nerve-wallet-node:beta-1.0.0
+    restart: always
+    container_name: nerve-wallet
+    ports:
+      # 端口映射
+      - 17001:17001
+      - 17002:17002
+      - 17004:17004
+    volumes:
+      # 数据库目录映射
+      - ./data:/nuls/data
+      - ./logs:/nuls/Logs
+    environment:
+      TIME_ZONE: Asia/Shanghai
+```
+
+17001 Nerve链协议通信端口（必选）
+
+17002 Nerve链跨链协议端口（必选）
+
+17004 http api接口使用端口（可选）
+
+/nuls/data 数据存储目录
+
+/nuls/Logs 日志存储目录
+
+PS：请务必在服务器防火墙设置开启以上端口，否则会影响区块同步
+
+钱包启动、停止命令：
+
+启动：docker-compose up -d
+
+停止：docker-compose down
+
+## 进入钱包命令行及钱包管理命令
 
 进入钱包命令行：
 
@@ -211,42 +262,7 @@ docker start nerve-wallet
 docker restart nerve-wallet
 ```
 
-## docker-compose安装启动
-
-docker安装启动成功之后，执行下面两条命令安装docker-compose并赋予权限：
-
-```
-sudo curl -L "https://github.com/docker/compose/releases/download/1.24.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-```
-
-安装成功之后，在某个目录（随意）下新建一个文件docker-compose.yml，写入下面的代码并保存：
-
-```
-version: '3.1'
-services:
-  nerve:
-    image: nervenetwork/nerve-wallet-node:beta-1.0.0
-    restart: always
-    container_name: nerve-wallet
-    ports:
-      # 端口映射
-      - 17001:17001
-      - 17002:17002
-      - 17004:17004
-    volumes:
-      # 数据库目录映射
-      - ./data:/nuls/data
-      - ./logs:/nuls/Logs
-    environment:
-      TIME_ZONE: Asia/Shanghai
-```
-
-钱包启动、停止命令：
-
-启动：docker-compose up -d
-
-停止：docker-compose down
+## 
 
 ## Nerve节点钱包更新
 
@@ -272,5 +288,5 @@ CONTAINER ID        IMAGE                    COMMAND                  CREATED   
 docker pull nervenetwork/nerve-wallet-node:beta-1.0.0
 ```
 
-再次启动nerve节点钱包即可，重复三、四操作（如果需要清数据，请删除root目录下的data、logs目录）
+再次启动nerve节点钱包即可，根据不同的启动方法选择重复第一种或第二种启动方法（如果需要清数据，请删除root目录下的data、logs目录）
 

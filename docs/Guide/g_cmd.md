@@ -551,7 +551,7 @@ nerve>>> gettx efa00a925a8e5aebc9b12f8e5c6c016290d0245624308328c500a05f742384c8
 
 ### Create Agent
 
-Create a agent based on the address, you need to provide two addresses when creating the agent, the first address is the agent address, you need to enter the agent address password. At the same time, a minimum deposit of 20,000 NVT is required.
+Create a agent based on the address, you need to provide two addresses when creating the agent, the first address is the agent address, you need to enter the agent address password. At the same time, a minimum deposit of 20,0000 NVT is required.
 
 - **Command：createagent &lt;agentAddress&gt; &lt;packingAddress&gt; &lt;deposit&gt;** [RewardAddress]
 
@@ -559,7 +559,7 @@ Create a agent based on the address, you need to provide two addresses when crea
 | ---------------------- | ------------------------------------------------------------ |
 | &lt;agentAddress&gt;   | Create the address of the agent,Required                     |
 | &lt;packingAddress&gt; | Agent packing address,Required（Note：Default password：nuls123456,it can be set through the nuls.ncf, otherwise the agent cannot pack the block） |
-| &lt;deposit&gt;        | Margin for creating agent,not less than 20000NVT,Required    |
+| &lt;deposit&gt;        | Margin for creating agent,not less than 200000NVT,Required    |
 | [RewardAddress]        | Reward address,default agentAddress（Optional）              |
 
 Return agent hash
@@ -571,7 +571,7 @@ Return agent hash
 Example
 
 ```
-nerve>>> createagent TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 200000
+nerve>>> createagent TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 2000000
 Enter agent address password**********
 "dfcdd777ed75889fbea9756c3fb287766c4e511c6e37daa54deb29c17ccb72cc"
 ```
@@ -586,7 +586,7 @@ Increase the node margin after creating a agent.
 | ----------------- | ------------------------------------------------------ |
 | &lt;address&gt;   | Create the address of the agent                        |
 | &lt;agentHash&gt; | the agemt hash                                         |
-| &lt;deposit&gt;   | Increase the amount of margin（Not less than 2000NVT） |
+| &lt;deposit&gt;   | Increase the amount of margin（Not less than 20000NVT） |
 
 Return hash
 
@@ -737,14 +737,14 @@ nerve>>> getagents 1 10
 
 ### Current Staking
 
-According to the address to join the staking, at least 2000NVT is required
+According to the address to join the staking, at least 10000NVT is required
 
 - **Command：deposit &lt;address&gt; &lt;deposit&gt;[symbol]**
 
 | Parameter       | Explain                                                  |
 | --------------- | -------------------------------------------------------- |
 | &lt;address&gt; | address ,Required                                        |
-| &lt;deposit&gt; | Join the staking deposit, not less than 2000NVT,Required |
+| &lt;deposit&gt; | Join the staking deposit, not less than 10000NVT,Required |
 | [symbol]        | Mortgage asset, default NVT                              |
 
 Return tx hash.
@@ -756,7 +756,7 @@ Return tx hash.
 Example
 
 ```
-nerve>>> deposit TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 2000
+nerve>>> deposit TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 10000
 Please enter the password.
 Enter your password:**********
 cb74179c27c42a77f32df4773fe0821bc6d47b1435bfbf08331a744711ab3066
@@ -764,14 +764,14 @@ cb74179c27c42a77f32df4773fe0821bc6d47b1435bfbf08331a744711ab3066
 
 ### Regular Staking
 
-According to the address to join the staking, at least 2000NVT is required
+According to the address to join the staking, at least 10000NVT is required
 
 - **Command：depositFixed&lt;address&gt; &lt;deposit&gt;&lt;deposit time&gt;[symbol]**
 
 | Parameter            | Explain                                                      |
 | -------------------- | ------------------------------------------------------------ |
 | &lt;address&gt;      | address,Required                                             |
-| &lt;deposit&gt;      | Join the staking deposit, not less than 2000NVT,Required     |
+| &lt;deposit&gt;      | Join the staking deposit, not less than 10000NVT,Required     |
 | &lt;deposit time&gt; | staking time,value（THREE_MONTHS, HALF_YEAR, ONE_YEAR, TOW_YEARS, THREE_YEARS, FIVE_YEARS, TEN_YEARS） |
 | [symbol]             | Assets, default NVT                                          |
 
@@ -784,7 +784,7 @@ Return tx hash
 Example
 
 ```
-nerve>>> depositFixed TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 2000 THREE_MONTHS
+nerve>>> depositFixed TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 10000 THREE_MONTHS
 Please enter the password.
 Enter your password:********
 ac3b3b783df158f1643fcddd570d258c8a09970706907fb910c951c9ae7a9662

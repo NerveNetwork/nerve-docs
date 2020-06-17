@@ -473,12 +473,12 @@ nerve>>> getbalance TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 2 1
 
 根据账户地址或别名将NVT转入另一账户地址或别名中
 
-- **命令：transfer &lt;formAddress&gt;|&lt;formAlias&gt; &lt;toAddress&gt;|&lt;toAlias&gt; &lt;amount&gt; [remark] **
+- **命令：transfer &lt;fromAddress&gt;|&lt;fromAlias&gt; &lt;toAddress&gt;|&lt;toAlias&gt; &lt;amount&gt; [remark] **
 
 | 参数                | 说明                                 |
 | ------------------- | ------------------------------------ |
-| &lt;formAddress&gt; | 转出地址(与formAlias任选一项）       |
-| &lt;formAlias&gt;   | 转出地址别名(与formAddress任选一项） |
+| &lt;fromAddress&gt; | 转出地址(与fromAlias任选一项）       |
+| &lt;fromAlias&gt;   | 转出地址别名(与fromAddress任选一项） |
 | &lt;toAddress&gt;   | 接收地址(与toAlias任选一项）         |
 | &lt;toAlias&gt;     | 接收地址别名(与toAddress任选一项）   |
 | &lt;amount&gt;      | 转账数量，必填                       |
@@ -571,7 +571,7 @@ nerve>>> gettx efa00a925a8e5aebc9b12f8e5c6c016290d0245624308328c500a05f742384c8
 
 ### 创建节点
 
-根据账户地址创建节点,创建节点时需要提供两个地址，第一个地址为节点地址，需要输入节点地址账户密码。同时需要至少20000NVT的保证金。
+根据账户地址创建节点,创建节点时需要提供两个地址，第一个地址为节点地址，需要输入节点地址账户密码。同时需要至少200000NVT的保证金。
 
 - **命令：createagent &lt;agentAddress&gt; &lt;packingAddress&gt; &lt;deposit&gt;** [RewardAddress]
 
@@ -579,7 +579,7 @@ nerve>>> gettx efa00a925a8e5aebc9b12f8e5c6c016290d0245624308328c500a05f742384c8
 | ---------------------- | ------------------------------------------------------------ |
 | &lt;agentAddress&gt;   | 创建节点的账户地址，必填                                     |
 | &lt;packingAddress&gt; | 节点打包账户地址，必填（注：该账户默认密码：nuls123456，可以通过配置文件设置，否则节点不能打包出块） |
-| &lt;deposit&gt;        | 创建节点的保证金，不能低于20000NVT，必填                     |
+| &lt;deposit&gt;        | 创建节点的保证金，不能低于200000NVT，必填                     |
 | [RewardAddress]        | 奖励地址，默认为节点创建地址（选填）                         |
 
 返回信息 返回节点的agent hash
@@ -631,22 +631,25 @@ Enter your password:********
 
 - **命令：reduceAgentDeposit &lt;address&gt; &lt;agentHash&gt; &lt;deposit**&gt;
 
-| 参数              | 说明           |
-| ----------------- | -------------- |
-| &lt;address&gt;   | 节点拥有地址   |
-| &lt;agentHash&gt; | 节点创建hash   |
-| &lt;deposit&gt;   | 减少保证金数量 |
+| 参数              | 说明                             |
+| ----------------- | -------------------------------- |
+| &lt;address&gt;   | 节点拥有地址                     |
+| &lt;agentHash&gt; | 节点创建hash                     |
+| &lt;deposit&gt;   | 减少保证金数量（不小于20000NVT） |
 
 返回值，交易hash
 
 ```
-""
+"9ce21dad67e0f0af2599b41b515a7f7018059418bab892a7b68f283d489abc4b"
 ```
 
 示例
 
 ```
-nerve>>> 
+nerve>>> reduceAgentDeposit TNVTdN9i8H46GtktXW9RwQaboGcAAVNHLbjfp 9f89db1378bdbb4f2b95edf9f88926311a974839bd1877673d5da17cba0c82f0 20000
+Please enter the password.
+Enter your password:********
+"9ce21dad67e0f0af2599b41b515a7f7018059418bab892a7b68f283d489abc4b"
 ```
 
 
@@ -752,15 +755,15 @@ nerve>>> getagents 1 11
 
 ### 活期staking
 
-根据账户地址，加入staking，至少需要2000NVT
+根据账户地址，加入staking，至少需要10000NVT
 
 - **命令：deposit &lt;address&gt; &lt;deposit&gt;[symbol]**
 
-| 参数            | 说明                                     |
-| --------------- | ---------------------------------------- |
-| &lt;address&gt; | 账户地址，必填                           |
-| &lt;deposit&gt; | 加入staking保证金，不能低于2000NVT，必填 |
-| [symbol]        | 抵押资产，默认为NVT                      |
+| 参数            | 说明                                      |
+| --------------- | ----------------------------------------- |
+| &lt;address&gt; | 账户地址，必填                            |
+| &lt;deposit&gt; | 加入staking保证金，不能低于10000NVT，必填 |
+| [symbol]        | 抵押资产，默认为NVT                       |
 
 返回信息 加入staking的交易hash，如果要退出这笔共识，则需要该hash。
 
@@ -771,7 +774,7 @@ nerve>>> getagents 1 11
 示例
 
 ```
-nerve>>> deposit TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 2000
+nerve>>> deposit TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 10000
 Please enter the password.
 Enter your password:**********
 cb74179c27c42a77f32df4773fe0821bc6d47b1435bfbf08331a744711ab3066
@@ -786,7 +789,7 @@ cb74179c27c42a77f32df4773fe0821bc6d47b1435bfbf08331a744711ab3066
 | 参数                 | 说明                                                         |
 | -------------------- | ------------------------------------------------------------ |
 | &lt;address&gt;      | 账户地址，必填                                               |
-| &lt;deposit&gt;      | 加入staking保证金，不能低于2000NVT，必填                     |
+| &lt;deposit&gt;      | 加入staking保证金，不能低于10000NVT，必填                    |
 | &lt;deposit time&gt; | staking时长，取值有（THREE_MONTHS, HALF_YEAR, ONE_YEAR, TOW_YEARS, THREE_YEARS, FIVE_YEARS, TEN_YEARS） |
 | [symbol]             | 资产，默认NVT                                                |
 
@@ -799,7 +802,7 @@ cb74179c27c42a77f32df4773fe0821bc6d47b1435bfbf08331a744711ab3066
 示例
 
 ```
-nerve>>> depositFixed TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 2000 THREE_MONTHS
+nerve>>> depositFixed TNVTdN9iJVX42PxxzvhnkC7vFmTuoPnRAgtyA 10000 THREE_MONTHS
 Please enter the password.
 Enter your password:********
 ac3b3b783df158f1643fcddd570d258c8a09970706907fb910c951c9ae7a9662
@@ -1121,11 +1124,3 @@ nerve>>> getcrosstxstate 6fe7897431b65fc8e9f74da2dffbf120eac1497fcafd712147693aa
 ```
 nerve>>> exit
 ```
-
-
-
-
-
-
-
-witdep	
