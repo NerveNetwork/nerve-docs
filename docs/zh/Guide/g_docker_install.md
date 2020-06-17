@@ -160,12 +160,12 @@ docker run \
        -p 17004:17004 \
        -v `pwd`/data:/nuls/data \
        -v `pwd`/logs:/nuls/Logs \
-       nervenetwork/nerve-wallet-node:beta-1.0.0
+       nervenetwork/nerve-wallet-node:beta-1.0.1
 ```
 
-17001 Nerve链协议通信端口（必选）
+**17001 Nerve链协议通信端口（必选）**
 
-17002 Nerve链跨链协议端口（必选）
+**17002 Nerve链跨链协议端口（必选）**
 
 17004 http api接口使用端口（可选）
 
@@ -173,7 +173,7 @@ docker run \
 
 /nuls/Logs 日志存储目录
 
-PS：请务必在服务器防火墙设置开启以上端口，否则会影响区块同步
+**PS：请务必在服务器防火墙设置开启以上端口，否则会影响区块同步**
 
 ## 第二种方式docker-compose安装启动Nerve节点钱包
 
@@ -190,7 +190,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 version: '3.1'
 services:
   nerve:
-    image: nervenetwork/nerve-wallet-node:beta-1.0.0
+    image: nervenetwork/nerve-wallet-node:beta-1.0.1
     restart: always
     container_name: nerve-wallet
     ports:
@@ -206,9 +206,9 @@ services:
       TIME_ZONE: Asia/Shanghai
 ```
 
-17001 Nerve链协议通信端口（必选）
+**17001 Nerve链协议通信端口（必选）**
 
-17002 Nerve链跨链协议端口（必选）
+**17002 Nerve链跨链协议端口（必选）**
 
 17004 http api接口使用端口（可选）
 
@@ -216,7 +216,7 @@ services:
 
 /nuls/Logs 日志存储目录
 
-PS：请务必在服务器防火墙设置开启以上端口，否则会影响区块同步
+**PS：请务必在服务器防火墙设置开启以上端口，否则会影响区块同步**
 
 钱包启动、停止命令：
 

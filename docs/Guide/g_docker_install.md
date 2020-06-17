@@ -23,11 +23,11 @@
 **Consensus reward:** It is 2 times the block reward of POS income + handling fee
 
 To meet the conditions:
--Top 15 NVT pledges
--The block address holds a certain amount of assets of the heterogeneous chain (the currently connected heterogeneous chain is Ethereum, it is recommended to hold at least 0.1ETH)
--Provide stable server equipment
--Block transaction and block verification
--Maintain cross-chain assets and proposals
+- Top 15 NVT staking
+- The block address holds a certain amount of assets of the heterogeneous chain (the currently connected heterogeneous chain is Ethereum, it is recommended to hold at least 0.1ETH)
+- Provide stable server equipment
+- Block transaction and block verification
+- Maintain cross-chain assets and proposals
   
 
 #### Consensus node:
@@ -35,9 +35,9 @@ To meet the conditions:
 **Consensus Reward:** It is 1.73 times of POS revenue block reward + handling fee
 
 To meet the conditions:
--Top 35 NVT pledges
--Provide stable server equipment
--Block transaction and block verification
+- Top 35 NVT staking
+- Provide stable server equipment
+- Block transaction and block verification
   
 
 
@@ -46,9 +46,9 @@ To meet the conditions:
 **Consensus reward:** equal to current POS
 
 To meet the conditions:
--Pledge at least 20W NVT
--Provide stable server equipment
--Participate in block broadcasting
+- Stake at least 20W NVT
+- Provide stable server equipment
+- Participate in block broadcasting
 
 
 ## Install docker under Linux
@@ -160,12 +160,12 @@ docker run \
        -p 17004:17004 \
        -v `pwd`/data:/nuls/data \
        -v `pwd`/logs:/nuls/Logs \
-       nervenetwork/nerve-wallet-node:beta-1.0.0
+       nervenetwork/nerve-wallet-node:beta-1.0.1
 ```
 
-17001 Nerve chain protocol communication port (required)
+**17001 Nerve chain protocol communication port (required)**
 
-17002 Nerve chain cross-chain protocol port (required)
+**17002 Nerve chain cross-chain protocol port (required)**
 
 17004 http api interface using port (optional)
 
@@ -173,7 +173,7 @@ docker run \
 
 /nuls/Logs Log storage directory
 
-PS: Be sure to enable the above ports in the server firewall settings, otherwise it will affect the block synchronization
+**PS: Be sure to enable the above ports in the server firewall settings, otherwise it will affect the block synchronization**
 
 ## The second way docker-compose install and start Nerve node wallet
 
@@ -190,7 +190,7 @@ After the installation is successful, create a new file docker-compose.yml in a 
 version: '3.1'
 services:
   nerve:
-    image: nervenetwork/nerve-wallet-node:beta-1.0.0
+    image: nervenetwork/nerve-wallet-node:beta-1.0.1
     restart: always
     container_name: nerve-wallet
     ports:
@@ -206,9 +206,9 @@ services:
       TIME_ZONE: Asia/Shanghai
 ```
 
-17001 Nerve chain protocol communication port (required)
+**17001 Nerve chain protocol communication port (required)**
 
-17002 Nerve chain cross-chain protocol port (required)
+**17002 Nerve chain cross-chain protocol port (required)**
 
 17004 http api interface using port (optional)
 
@@ -216,7 +216,7 @@ services:
 
 /nuls/Logs Log storage directory
 
-PS: Be sure to enable the above ports in the server firewall settings, otherwise it will affect the block synchronization
+**PS: Be sure to enable the above ports in the server firewall settings, otherwise it will affect the block synchronization**
 
 Wallet start and stop commands:
 
