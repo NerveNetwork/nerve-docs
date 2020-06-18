@@ -50,6 +50,11 @@
 - 提供稳定的服务器设备
 - 参与区块广播
 
+## Centos7系统小专区
+
+如果你的系统是**centos7**，那么恭喜你，下方的教程可以**不用继续看了**。Nerve社区的技术爱好者自发为centos7的系统编写了一个自动化脚本，执行该脚本即可自动完成docker安装，节点镜像安装/更新，启动容器，进入命令行和检查启动状态等一系列任务，做到了开箱即用
+
+[点击此处下载脚本](https://github.com/NerveNetwork/nerve/blob/master/docker_build/nerve)
 
 ## Linux下安装docker
 

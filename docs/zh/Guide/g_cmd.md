@@ -600,13 +600,12 @@ Enter agent address password**********
 
 节点创建地址，创建节点后增加节点保证金
 
-- **命令：appendAgentDeposit &lt;address&gt; &lt;agentHash&gt; &lt;deposit**&gt;
+- **命令：appendAgentDeposit &lt;address&gt; &lt;deposit**&gt;
 
 | 参数              | 说明                            |
 | ----------------- | ------------------------------- |
 | &lt;address&gt;   | 节点拥有地址                    |
-| &lt;agentHash&gt; | 节点创建hash                    |
-| &lt;deposit&gt;   | 增加保证金数量（不小于2000NVT） |
+| &lt;deposit&gt;   | 增加保证金数量（不小于20000NVT） |
 
 返回值，交易hash
 
@@ -629,12 +628,11 @@ Enter your password:********
 
 地址创建节点之后，当需要减少节点保证金的时候，使用该方法，减少的保证金锁定72小时
 
-- **命令：reduceAgentDeposit &lt;address&gt; &lt;agentHash&gt; &lt;deposit**&gt;
+- **命令：reduceAgentDeposit &lt;address&gt;&lt;deposit**&gt;
 
 | 参数              | 说明                             |
 | ----------------- | -------------------------------- |
 | &lt;address&gt;   | 节点拥有地址                     |
-| &lt;agentHash&gt; | 节点创建hash                     |
 | &lt;deposit&gt;   | 减少保证金数量（不小于20000NVT） |
 
 返回值，交易hash

@@ -50,6 +50,11 @@ To meet the conditions:
 - Provide stable server equipment
 - Participate in block broadcasting
 
+## Centos7 system area
+
+If your system is **centos7**, then congratulations, **you can skip the tutorial below**. Technical enthusiasts in the Nerve community spontaneously wrote an automated script for the centos7 system. Executing this script can automatically complete docker installation, node image installation/update, start the container, enter the command line and check the startup status, etc. Out of the box
+
+[Click here to download the script](https://github.com/NerveNetwork/nerve/blob/master/docker_build/nerve)
 
 ## Install docker under Linux
 

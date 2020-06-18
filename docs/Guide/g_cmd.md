@@ -580,12 +580,11 @@ Enter agent address password**********
 
 Increase the node margin after creating a agent.
 
-- **Command：appendAgentDeposit &lt;address&gt; &lt;agentHash&gt; &lt;deposit**&gt;
+- **Command：appendAgentDeposit &lt;address&gt; &lt;deposit**&gt;
 
 | Parameter         | Explain                                                |
 | ----------------- | ------------------------------------------------------ |
 | &lt;address&gt;   | Create the address of the agent                        |
-| &lt;agentHash&gt; | the agemt hash                                         |
 | &lt;deposit&gt;   | Increase the amount of margin（Not less than 20000NVT） |
 
 Return hash
@@ -609,13 +608,12 @@ Enter your password:********
 
 After the agent is created at the address, when the agentdeposit needs to be reduced, this method is used to lock the reduced deposit for 72 hours
 
-- **Command：reduceAgentDeposit &lt;address&gt; &lt;agentHash&gt; &lt;deposit**&gt;
+- **Command：reduceAgentDeposit &lt;address&gt;&lt;deposit**&gt;
 
 | Parameter         | Explain                  |
 | ----------------- | ------------------------ |
 | &lt;address&gt;   | the address create agent |
-| &lt;agentHash&gt; | the hash create agent    |
-| &lt;deposit&gt;   | amount of reduce         |
+| &lt;deposit&gt;   | amount of reduce  margin （Not less than 20000NVT）|
 
 Return tx hash
 
