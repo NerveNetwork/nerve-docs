@@ -165,7 +165,7 @@ docker run \
        -p 17004:17004 \
        -v `pwd`/data:/nuls/data \
        -v `pwd`/logs:/nuls/Logs \
-       nervenetwork/nerve-wallet-node:beta-1.0.2
+       nervenetwork/nerve-wallet-node:beta-1.0.4
 ```
 
 **17001 Nerve链协议通信端口（必选）**
@@ -195,7 +195,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 version: '3.1'
 services:
   nerve:
-    image: nervenetwork/nerve-wallet-node:beta-1.0.2
+    image: nervenetwork/nerve-wallet-node:beta-1.0.4
     restart: always
     container_name: nerve-wallet
     ports:
