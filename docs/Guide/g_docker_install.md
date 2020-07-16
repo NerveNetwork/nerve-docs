@@ -165,7 +165,7 @@ docker run \
        -p 17004:17004 \
        -v `pwd`/data:/nuls/data \
        -v `pwd`/logs:/nuls/Logs \
-       nervenetwork/nerve-wallet-node:beta-1.0.4
+       nervenetwork/nerve-wallet-node:beta-1.0.6
 ```
 
 **17001 Nerve chain protocol communication port (required)**
@@ -195,7 +195,7 @@ After the installation is successful, create a new file docker-compose.yml in a 
 version: '3.1'
 services:
   nerve:
-    image: nervenetwork/nerve-wallet-node:beta-1.0.4
+    image: nervenetwork/nerve-wallet-node:beta-1.0.6
     restart: always
     container_name: nerve-wallet
     ports:
