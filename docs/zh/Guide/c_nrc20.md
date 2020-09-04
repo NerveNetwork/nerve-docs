@@ -26,15 +26,15 @@
   | contractAddress | 跨链token合约地址 |
 
 ```
-nuls>>> getContractAsset tNULSeBaN7eMT1PDG44vdGnL9uJkCsvTskBFW6
+nuls>>> getContractAsset tNULSeBaN7sT5DV7Nd2XDVZHCQe3KmRW4cXL4n
 {
-  "assetSymbol" : "TS",
-  "assetId" : 13,
-  "assetOwnerAddress" : "tNULSeBaN7eMT1PDG44vdGnL9uJkCsvTskBFW6",
-  "assetName" : "test",
-  "initNumber" : 10000000000000000,
+  "assetSymbol" : "PETC",
+  "assetId" : 21,
+  "assetOwnerAddress" : "tNULSeBaN7sT5DV7Nd2XDVZHCQe3KmRW4cXL4n",
+  "assetName" : "PetCoin",
+  "initNumber" : 200000000000000,
   "assetType" : 2,
-  "decimalPlace" : 8
+  "decimalPlace" : 6
 }
 ```
 
@@ -42,16 +42,16 @@ nuls>>> getContractAsset tNULSeBaN7eMT1PDG44vdGnL9uJkCsvTskBFW6
 
 - **命令：addcrosslocalasset &lt;address&gt;&lt;assetId&gt;**
 
-  | 参数            | 说明                                                     |
-  | --------------- | -------------------------------------------------------- |
-  | &lt;address&gt; | 注册跨链资产地址，需要导入节点钱包且余额需要大于1000NULS |
-  | &lt;assetId&gt; | NRC20 token在主网的资产ID                                |
+  | 参数            | 说明                                                         |
+  | --------------- | ------------------------------------------------------------ |
+  | &lt;address&gt; | 注册跨链资产地址，需要导入节点钱包且余额需要大于1000NULS（800锁定，200销毁） |
+  | &lt;assetId&gt; | NRC20 token在主网的资产ID                                    |
 
 ```
-nuls>>> addcrosslocalasset tNULSeBaMqpRQkHCs5ur3ck4LXEZB4qmmkPNo3 13
+nuls>>> addcrosslocalasset tNULSeBaMfYYx6Pk652k5biNdACmzdSG6UU6N4 21
 Please enter the password.
-Enter your password:********
-1416248734b0f218dbb7af1603276700d052713cc4f8cf8ca709f2fe75ebe98c
+Enter your password:**********
+5bbc2a038586151a6b9c5afeefb546ecd5481e25741b97f07c3d0fb30382eb6a
 ```
 
 查询一下该跨链资产：
@@ -64,20 +64,20 @@ Enter your password:********
   | &lt;assetId&gt; | 前面查询的token资产ID               |
 
 ```
-nuls>>> crossassetinfo 2 13
+nuls>>> crossassetinfo 2 21
 {
   "chainId" : 2,
-  "assetId" : 13,
-  "symbol" : "TS",
-  "assetName" : "test",
+  "assetId" : 21,
+  "symbol" : "PETC",
+  "assetName" : "PetCoin",
   "depositNuls" : "100000000000",
   "destroyNuls" : "20000000000",
-  "initNumber" : "1000000000000000000000000",
-  "decimalPlaces" : 8,
+  "initNumber" : "200000000000000000000",
+  "decimalPlaces" : 6,
   "enable" : true,
-  "createTime" : 1587524754,
-  "address" : "tNULSeBaMqpRQkHCs5ur3ck4LXEZB4qmmkPNo3",
-  "txHash" : "1416248734b0f218dbb7af1603276700d052713cc4f8cf8ca709f2fe75ebe98c"
+  "createTime" : 1599198332,
+  "address" : "tNULSeBaMfYYx6Pk652k5biNdACmzdSG6UU6N4",
+  "txHash" : "5bbc2a038586151a6b9c5afeefb546ecd5481e25741b97f07c3d0fb30382eb6a"
 }
 ```
 
@@ -85,7 +85,7 @@ nuls>>> crossassetinfo 2 13
 
 ### 主网到平行链
 
-跨链token从主网到平行链进行跨链时，token合约中提供了专属的跨链方法（transferCrossChain）：
+NRC20 token从主网到平行链进行跨链时，目前不支持从转账页面直接发起跨链转账交易，token合约中提供了专属的跨链方法（transferCrossChain），to：转入的平行链地址，value：转出的数量，加上精度（该NRC20合约精度位多少则在数量后面加多少个0），高级选项中的value填入0.1（转入0.1nuls作为跨链手续费，否则可能导致交易失败！）：
 
 ![2](./g_NRC20/2.png)
 
@@ -100,13 +100,17 @@ nuls>>> crossassetinfo 2 13
   | [assetId]       | token的资产ID（默认1）      |
 
 ```
-nuls>>> getbalance TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 2 13
+nuls>>> getbalance TNVTdTSPTXQudD2FBSefpQRkXTyhhtSjyEVAF 2 21
 {
   "available" : 1000000,
   "total" : 1000000,
   "freeze" : 0
 }
 ```
+
+或者直接在网页钱包中查看跨链过来的资产：
+
+![7](./g_NRC20/7.png)
 
 这就完成了NRC20 token从主网到平行链的跨链。
 
@@ -126,7 +130,7 @@ nuls>>> getbalance TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG 2 13
   | [remark]            | 备注                                                         |
 
 ```
-nerve>>> createcrosstx TNVTdN9i6eWsUxTTtC36JRqTAQit92vydnASG tNULSeBaMuU6sq72mptyghDXDWQXKJ5QUaWhGj 2 13 2000
+nerve>>> createcrosstx TNVTdTSPTXQudD2FBSefpQRkXTyhhtSjyEVAF tNULSeBaMuU6sq72mptyghDXDWQXKJ5QUaWhGj 2 21 2000
 Please enter the password.
 Enter your password:**********
 55ea878ef4e54af445c70ba121b8ef42593197e3f1b72b2eee039043b985bf15
@@ -138,6 +142,22 @@ Enter your password:**********
 
 如果接收地址为其他平行链地址，则查询方式与发出平行链一致（略）。
 
-## 注意
+### 注意
 
 跨链过程中交易需要经过多个区块的确认，所以需要等一定时间才能查询到跨链资产。
+
+## 在NerveDEX上创建NRC20 token交易对
+
+首先，进入[NerveDEX](https://nervedex.com/trading)，选择目录中工具下面的NervePad点击进入：
+
+![4](./g_NRC20/4.png)
+
+进入NervePad之后，选择创建交易对页签，进入交易对创建页面，并且选择NRC20token为交易资产，完善其他信息发起创建交易对交易（创建交易对的地址需要拥有大于**2000NVT**资产）：
+
+![5](./g_NRC20/5.png)
+
+交易对创建成功之后，进入交易中心的OpenList可以查看创建成功的交易对：
+
+![6](./g_NRC20/6.png)
+
+至此，我们成功的创建了交易对，开始交易吧！

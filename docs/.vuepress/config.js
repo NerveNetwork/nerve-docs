@@ -74,75 +74,75 @@ module.exports = {
                         },
                     ],
                     "/Docs/": [
-                        {
-                            title: 'What is Nerve',
-                            collapsable: false,
-                            children: [
-                                '',
-                                "d_address",
-                                "d_pocbft",
-                                "d_assets",
-                                "d_staking",
-                                "d_feeding",
-                                "d_cross",
-                                "d_dex",
-                                "d_commu",
-                                "d_words",
-                            ]
-                        },
-                        {
-                            title: 'Nerve Client',
-                            collapsable: false,
-                            children: [
-                                'n_overview',
-                                'n_build',
-                                'n_node_link',
-                                'n_docker',
-                                'n_cmd_less',
-                                'n_cmd_link',
-                                'n_upgrade',
-                            ]
-                        },
-                        {
-                            title: 'API',
-                            collapsable:false,
-                            children: [
-                                'a_overview',
-                                'a_nodeapi',
-                                'a_public',
-                                'a_dexapi',
-                            ]
-                        },
-                        {
-                            title: 'SDK',
-                            collapsable:false,
-                            children: [
-                                's_overview',
-                                's_java',
-                                's_go',
-                                's_c',
-                                's_js',
-                                's_ios',
-                            ]
-                        },
+                        // {
+                        //     title: 'What is Nerve',
+                        //     collapsable: false,
+                        //     children: [
+                        //         '',
+                        //         "d_address",
+                        //         "d_pocbft",
+                        //         "d_assets",
+                        //         "d_staking",
+                        //         "d_feeding",
+                        //         "d_cross",
+                        //         "d_dex",
+                        //         "d_commu",
+                        //         "d_words",
+                        //     ]
+                        // },
+                        // {
+                        //     title: 'Nerve Client',
+                        //     collapsable: false,
+                        //     children: [
+                        //         'n_overview',
+                        //         'n_build',
+                        //         'n_node_link',
+                        //         'n_docker',
+                        //         'n_cmd_less',
+                        //         'n_cmd_link',
+                        //         'n_upgrade',
+                        //     ]
+                        // },
+                        // {
+                        //     title: 'API',
+                        //     collapsable:false,
+                        //     children: [
+                        //         'a_overview',
+                        //         'a_nodeapi',
+                        //         'a_public',
+                        //         'a_dexapi',
+                        //     ]
+                        // },
+                        // {
+                        //     title: 'SDK',
+                        //     collapsable:false,
+                        //     children: [
+                        //         's_overview',
+                        //         's_java',
+                        //         's_go',
+                        //         's_c',
+                        //         's_js',
+                        //         's_ios',
+                        //     ]
+                        // },
                         {
                             title: 'DEX',
                             collapsable:false,
                             children: [
-                                'x_overview',
-                                'x_example_bot',
-                                'x_example_page',
+                                'dex_design',
+                                'dex_api',
+                                'dex_module',
                             ]
                         },
-                        {
-                            title: 'DAPP',
-                            collapsable:false,
-                            children: [
-                                'e_overview',
-                                'e_xmind',
-                                'e_example',
-                            ]
-                        },
+                        // {
+                        //     title: 'DAPP',
+                        //     collapsable:false,
+                        //     children: [
+                        //         'e_overview',
+                        //         'e_xmind',
+                        //         'e_example',
+                        //     ]
+                        // },
                     ]
                 }
             },
@@ -167,7 +167,6 @@ module.exports = {
                                 // 'g_quickstart',
                                 // 'g_download',
                                 // 'g_wallet',
-                                'g_dex',
                                 'g_docker_install',
                                 'g_eth',
                                 'g_cmd',
@@ -196,75 +195,75 @@ module.exports = {
                         },
                     ],
                     "/zh/Docs/": [
+                        // {
+                        //     title: '认识Nerve',
+                        //     collapsable: false,
+                        //     children: [
+                        //         '',
+                        //         "d_address",
+                        //         "d_pocbft",
+                        //         "d_assets",
+                        //         "d_staking",
+                        //         "d_feeding",
+                        //         "d_cross",
+                        //         "d_dex",
+                        //         "d_commu",
+                        //         "d_words",
+                        //     ]
+                        // },
+                        // {
+                        //     title: '节点客户端',
+                        //     collapsable: false,
+                        //     children: [
+                        //         'n_overview',
+                        //         'n_build',
+                        //         'n_node_link',
+                        //         'n_docker',
+                        //         'n_cmd_less',
+                        //         'n_cmd_link',
+                        //         'n_upgrade',
+                        //     ]
+                        // },
+                        // {
+                        //     title: 'API',
+                        //     collapsable:false,
+                        //     children: [
+                        //         'a_overview',
+                        //         'a_nodeapi',
+                        //         'a_public',
+                        //         'a_dexapi',
+                        //     ]
+                        // },
+                        // {
+                        //     title: 'SDK',
+                        //     collapsable:false,
+                        //     children: [
+                        //         's_overview',
+                        //         's_java',
+                        //         's_go',
+                        //         's_c',
+                        //         's_js',
+                        //         's_ios',
+                        //     ]
+                        // },
                         {
-                            title: '认识Nerve',
-                            collapsable: false,
-                            children: [
-                                '',
-                                "d_address",
-                                "d_pocbft",
-                                "d_assets",
-                                "d_staking",
-                                "d_feeding",
-                                "d_cross",
-                                "d_dex",
-                                "d_commu",
-                                "d_words",
-                            ]
-                        },
-                        {
-                            title: '节点客户端',
-                            collapsable: false,
-                            children: [
-                                'n_overview',
-                                'n_build',
-                                'n_node_link',
-                                'n_docker',
-                                'n_cmd_less',
-                                'n_cmd_link',
-                                'n_upgrade',
-                            ]
-                        },
-                        {
-                            title: 'API',
+                            title: 'NerveDEX',
                             collapsable:false,
                             children: [
-                                'a_overview',
-                                'a_nodeapi',
-                                'a_public',
-                                'a_dexapi',
+                                'dex_design',
+                                'dex_api',
+                                'dex_module'
                             ]
                         },
-                        {
-                            title: 'SDK',
-                            collapsable:false,
-                            children: [
-                                's_overview',
-                                's_java',
-                                's_go',
-                                's_c',
-                                's_js',
-                                's_ios',
-                            ]
-                        },
-                        {
-                            title: 'DEX',
-                            collapsable:false,
-                            children: [
-                                'x_overview',
-                                'x_example_bot',
-                                'x_example_page',
-                            ]
-                        },
-                        {
-                            title: 'DAPP',
-                            collapsable:false,
-                            children: [
-                                'e_overview',
-                                'e_xmind',
-                                'e_example',
-                            ]
-                        },
+                        // {
+                        //     title: 'DAPP',
+                        //     collapsable:false,
+                        //     children: [
+                        //         'e_overview',
+                        //         'e_xmind',
+                        //         'e_example',
+                        //     ]
+                        // },
                     ]
                 }
             }
