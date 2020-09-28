@@ -188,7 +188,7 @@ module.exports = {
                                 // 'c_table',
                                 'c_nrc20',
                                 'c_nuls_register',
-                                // 'c_eth',
+                                'g_nervetoerc20',
                                 // 'c_btc',
                                 // 'c_cross',
                             ]
