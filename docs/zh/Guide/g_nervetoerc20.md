@@ -1,6 +1,6 @@
-# NERVE资产跨链到ETH网络（ERC20资产）
+# NERVE资产跨链到ETH网络
 
-## 一 在ETH网络创建定制的ERC20合约
+## 一 创建ERC20合约
 
 - **注意1**：必须使用NERVE团队提供的[ERC20合约源代码](https://github.com/NerveNetwork/contracts/blob/master/ERC20Minter.sol) `ERC20Minter.sol`
 - **注意2**：创建ERC20合约时，`decimals`必须与NERVE网络的资产的`decimals`一致
@@ -47,23 +47,31 @@
 
 4. 点击按钮，发起创建合约交易（通过matemask确认），交易发起确认之后，通过查询交易**获取ERC20合约地址**
 
-## 二 向NERVE团队提供NERVE网络的资产信息和创建好的ERC20合约地址
+## 二 申请绑定ERC20资产
 
-- 刚创建的NERVE团队定制的ERC20合约地址
-- NERVE网络资产链ID和资产ID（assetChainId, assetId）
+按如下模版发送邮件至 `support@nerve.network`
 
-- [NERVE资产查看地址](https://scan.nerve.network/assets)
+```
+Hi Nerve，
 
-发送邮件（support@nerve.network）或添加微信（nervenetwork）
+我是XXX项目，申请注册ERC20资产至Nerve网络，信息如下
 
-## 三 等待NERVE团队注册资产信息
+ERC20合约地址：0x7b6f71c8b123b38aa8099e0098bec7fbc35b8a13
+Nerve网络资产链ID和资产ID(assetChainId, assetId): 1-8    
+```
+
+
+## 三 等待反馈
+
+Nerve技术团队收到邮件后，将进行如下操作，请等待反馈
 
 - 在ETH多签合约中注册上述ERC20合约
 - 在NERVE网络注册绑定ERC20合约至提供的NERVE资产
 
 ## 四 参考文档
 
-1、将NRC20合约token跨链到NERVE网络[[1]](http://docs.nerve.network/zh/Guide/c_nrc20.html#%E5%88%9B%E5%BB%BA%E8%B7%A8%E9%93%BEtoken)
+- [将NRC20合约token跨链到NERVE网络](http://docs.nerve.network/zh/Guide/c_nrc20.html#%E5%88%9B%E5%BB%BA%E8%B7%A8%E9%93%BEtoken)
 
-2、在NerveDEX创建交易对[[2]](http://docs.nerve.network/zh/Guide/c_nrc20.html#%E5%9C%A8nervedex%E4%B8%8A%E5%88%9B%E5%BB%BAnrc20-token%E4%BA%A4%E6%98%93%E5%AF%B9)
+- [在NerveDEX创建交易对](http://docs.nerve.network/zh/Guide/c_nrc20.html#%E5%9C%A8nervedex%E4%B8%8A%E5%88%9B%E5%BB%BAnrc20-token%E4%BA%A4%E6%98%93%E5%AF%B9)
 
+- [ID查询地址](https://scan.nerve.network/assets)
