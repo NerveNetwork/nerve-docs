@@ -19,8 +19,4 @@ NULS提供了POCM平台：https://pocm.nuls.io/Token/NewToken 支持一键发行
 
 ## 创建交易对
 
-如果你想在NDEX上创建针对NRC20的交易对，请发送邮件至Pen@nuls.io 提交申请，邮件中所需填写的信息如下：
-
-- NRC20名称
-- NRC20合约地址
-- 申请的NRC20交易对的计价货币名称
+如果你想在NDEX上创建针对NRC20的交易对，进入NerverDEX的NervePad进行创建，详情参考：[NerveDEX上创建NRC20 token交易对](http://docs.nerve.network/zh/Guide/c_nrc20.html#%E5%9C%A8nervedex%E4%B8%8A%E5%88%9B%E5%BB%BAnrc20-token%E4%BA%A4%E6%98%93%E5%AF%B9)
