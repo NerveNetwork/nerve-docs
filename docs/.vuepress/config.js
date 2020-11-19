@@ -171,7 +171,6 @@ module.exports = {
                                 'g_eth',
                                 'g_cmd',
                                 'g_nrc_dex',
-                                'g_stake'
                                 // 'g_node',
                                 // 'g_precautions',
                                 // 'g_wallet_ig',
@@ -189,9 +188,7 @@ module.exports = {
                                 // 'c_table',
                                 'c_nrc20',
                                 'c_nuls_register',
-                                'g_nervetoerc20',
-                                'c_erc20_cross',
-                                'c_bep20_cross'
+                                'c_bep20_cross_erc20',
                                 // 'c_btc',
                                 // 'c_cross',
                             ]

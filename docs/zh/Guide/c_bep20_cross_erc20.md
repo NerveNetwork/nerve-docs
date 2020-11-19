@@ -1,4 +1,4 @@
-# Nerve网页钱包ETH与BSC资产跨链指南
+# 以太坊和BSC跨链指南
 
 ​	Nerve网络已经完成ETH、BSC资产的跨链工作，你可以把ETH网络的资产通过Nerve网络跨链到BSC网络，也可以把BSC网络资产跨链到ETH网络。
 
