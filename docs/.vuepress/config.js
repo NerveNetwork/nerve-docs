@@ -168,7 +168,6 @@ module.exports = {
                                 // 'g_download',
                                 // 'g_wallet',
                                 'g_docker_install',
-                                'g_eth',
                                 'g_cmd',
                                 'g_nrc_dex',
                                 // 'g_node',

@@ -34,29 +34,29 @@
 
 BSC主网字段信息如下：
 
-**Network Name：**BSC_MAIN（用户可以自定义）
+**Network Name：** BSC_MAIN（用户可以自定义）
 
-**New RPC URL：**https://bsc-dataseed1.defibit.io/
+**New RPC URL：** https://bsc-dataseed1.defibit.io/
 
-**Chain ID：**0x38
+**Chain ID：** 0x38
 
-**Symbol：**BNB
+**Symbol：** BNB
 
 填写完之后点击保存，网络选择BSC_MAIN，即连上了BSC网络。
 
 测试网配置：
 
-**Network Name：**BSC_TEST（用户可以自定义）
+**Network Name：** BSC_TEST（用户可以自定义）
 
-**New RPC URL：**https://data-seed-prebsc-2-s1.binance.org:8545/
+**New RPC URL：** https://data-seed-prebsc-2-s1.binance.org:8545/
 
-**Chain ID：**0x61
+**Chain ID：** 0x61
 
-**Symbol：**BNB
+**Symbol：** BNB
 
 ## ETH资产跨链进入Nerve网络
 
-**注意：**该操作教程图片为测试网。
+**注意：** 该操作教程图片为测试网。
 
 ### MetaMask（推荐使用）
 
