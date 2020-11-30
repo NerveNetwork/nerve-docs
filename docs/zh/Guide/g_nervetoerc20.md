@@ -1,4 +1,6 @@
-# NERVE资产跨链到ETH网络
+# NERVE资产跨链到ETH网络（BSC网络）
+
+ETH网络合约和BSC网络合约创建时，只有MINTER参数不同，其他完全一样。（文中的ERC20在创建BSC合约时就是BEP20）
 
 ## 一 创建ERC20合约
 
