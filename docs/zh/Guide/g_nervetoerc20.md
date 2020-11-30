@@ -39,11 +39,18 @@
 
 3. 输入参数（NAME、SYMBOL、DECIMALS、MINTER）：其中NAME和SYMBOL原则上需要跟已创建的NRC20（NERVE资产）保持一致，DECIMALS必须跟已创建的NRC20（NERVE资产）保持一致；
 
-   MINTER参数
-   
+   MINTER参数（ETH网络）
+
    测试网: 0x7D759A3330ceC9B766Aa4c889715535eeD3c0484
 
    正式网: 0x6758d4C4734Ac7811358395A8E0c3832BA6Ac624
+
+   MINTER参数（BSC网络）
+
+   BSC测试网: 0xf7915d4de86b856F3e51b894134816680bf09EEE
+   BSC主网: 0x3758AA66caD9F2606F1F501c9CB31b94b713A6d5
+
+   **注意：**在BSC网络上面注册合约跟ETH网络一样，只需要注意MINTER参数
 
 4. 点击按钮，发起创建合约交易（通过matemask确认），交易发起确认之后，通过查询交易**获取ERC20合约地址**
 
