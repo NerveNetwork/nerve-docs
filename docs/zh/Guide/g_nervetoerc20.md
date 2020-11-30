@@ -50,9 +50,10 @@ ETH网络合约和BSC网络合约创建时，只有MINTER参数不同，其他�
    MINTER参数（BSC网络）
 
    BSC测试网: 0xf7915d4de86b856F3e51b894134816680bf09EEE
+   
    BSC主网: 0x3758AA66caD9F2606F1F501c9CB31b94b713A6d5
 
-   **注意：**在BSC网络上面注册合约跟ETH网络一样，只需要注意MINTER参数
+   **注意** 在BSC网络上面注册合约跟ETH网络一样，只需要注意MINTER参数
 
 4. 点击按钮，发起创建合约交易（通过matemask确认），交易发起确认之后，通过查询交易**获取ERC20合约地址**
 
