@@ -170,6 +170,7 @@ module.exports = {
                                 'g_docker_install',
                                 'g_cmd',
                                 'g_nrc_dex',
+                                'c_lp_staking'
                                 // 'g_node',
                                 // 'g_precautions',
                                 // 'g_wallet_ig',
