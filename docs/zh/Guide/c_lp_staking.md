@@ -14,7 +14,7 @@
 - （2）选择主网络为BEP20（BSC）；
 - （3）输入提现金额；
 
-完成BNB提现之后，通过Nerve网页钱可以[跨链转出NVT到BSC网络](http://docs.nerve.network/zh/Guide/c_bep20_cross_erc20.html#eth%E8%B5%84%E4%BA%A7%E3%80%81bsc%E8%B5%84%E4%BA%A7%E4%BB%8Enerve%E7%BD%91%E7%BB%9C%E8%B7%A8%E9%93%BE%E8%BD%AC%E5%87%BA%E5%88%B0eth%E7%BD%91%E7%BB%9C%E3%80%81bsc%E7%BD%91%E7%BB%9C)
+完成BNB提现之后，通过Nerve网页钱包可以[跨链转出NVT到BSC网络](http://docs.nerve.network/zh/Guide/c_bep20_cross_erc20.html#eth%E8%B5%84%E4%BA%A7%E3%80%81bsc%E8%B5%84%E4%BA%A7%E4%BB%8Enerve%E7%BD%91%E7%BB%9C%E8%B7%A8%E9%93%BE%E8%BD%AC%E5%87%BA%E5%88%B0eth%E7%BD%91%E7%BB%9C%E3%80%81bsc%E7%BD%91%E7%BB%9C)
 
 **BSC网络NVT合约地址：** 0xf0e406c49c63abf358030a299c0e00118c4c6ba5
 
@@ -48,7 +48,7 @@ BNB和NVT资产准备就绪之后，就可以去添加流动性获取Cake-LP了�
 
 确认好资产之后点击Supply，弹出确认窗口，点击Confirm Supply，会唤醒MetaMask确认发送交易，在MetaMask上面确认之后等待交易确认即可获取到Cake-LP。**Cake-LP的合约地址为** 0xee31a8bb1edb26d8de688e2a1ca086e5c11f5978，可以在MetaMask上面添加Token查看余额。
 
-至此，Cake-LP成功获取，接下来就是讲Cake-LP跨链转入Nerve网络参与Staking。
+至此，Cake-LP成功获取，接下来就是将Cake-LP跨链转入Nerve网络参与Staking。
 
 ## Cake-LP参与staking
 
@@ -68,6 +68,6 @@ BNB和NVT资产准备就绪之后，就可以去添加流动性获取Cake-LP了�
 
 ## 如何获取NVT
 
-NVT可以在交易所获取：MXC、Bittrex、BitZ、NerveDEX等；
+NVT可以在交易所获取：MXC、Bittrex、BitZ、[NerveDEX](http://nervedex.com/)等；
 
 也可以在[PancakeSwap](https://exchange.pancakeswap.finance/?_gl=1*yfh8cv*_ga*MTgyNTc0Mzg2NC4xNjA1NTIwNzc2*_ga_334KNG3DMQ*MTYwNzU4NDY3NC4xNS4xLjE2MDc1ODQ2NzkuMA..#/swap?inputCurrency=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c&outputCurrency=0xf0e406c49c63abf358030a299c0e00118c4c6ba5)和[Uniswap](https://app.uniswap.org/#/swap?inputCurrency=0x7b6f71c8b123b38aa8099e0098bec7fbc35b8a13&outputCurrency=ETH)中交易换取。
