@@ -172,8 +172,8 @@ nuls>>> crosschaininfo 4
 ## Query the information of parallel chain registered assets
 
    Query the registration information of a parallel chain asset on the main network
-   
-- **Command：crosschaininfo &lt;chainId&gt; &lt;assetId&gt;**
+
+- **Command：crossassetinfo &lt;chainId&gt; &lt;assetId&gt;**
 
 | Parameter            | Explain     |
 | --------------- | ---------- |
@@ -222,9 +222,9 @@ Return parameter description
 
 
 ## Restore parallel chain registration in main chain
-   
+
    After the parallel chain is registered and logged out in the main network, if it needs to be restored, you can restore and update the information through the following command, which needs to run in the main network node
-   
+
 - **Command： updatecrosschain &lt;address&gt;、&lt;chainId&gt;、&lt;chainName&gt;、&lt;addressPrefix&gt;、&lt;magicNumber&gt;、&lt;maxSignatureCount&gt;、&lt;signatureBFTRatio&gt;、&lt;verifierList&gt;、&lt;asserId&gt;、&lt;symbol&gt;、&lt;assetName&gt;、&lt;initNumber&gt;、 [decimalPlaces]、[minAvailableNodeNum]**
 
 | Parameter                      | Explain                                           |
