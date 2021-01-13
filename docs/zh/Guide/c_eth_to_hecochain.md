@@ -1,4 +1,4 @@
-# ETH资产通过Nerve网络跨链转入Heco网络
+# ETH网络资产通过Nerve网络跨链转入Heco网络
 
 ​	Nerve网络现已支持ETH资产和Heco网络资产跨链流通，通过Nerve网络可以为两条链的资产跨链提供通道，本文指定钱包为[MetaMask](http://docs.nerve.network/zh/Guide/c_bep20_cross_erc20.html)和[Nerve网页钱包](https://wallet.nerve.network/)（图片数据为测试网数据）
 

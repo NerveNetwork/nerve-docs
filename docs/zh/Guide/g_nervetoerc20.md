@@ -1,6 +1,6 @@
-# NERVE资产跨链到ETH网络（BSC网络）
+# NERVE资产注册跨链到ETH网络、BSC网络、Heco网络
 
-ETH网络合约和BSC网络合约创建时，只有MINTER参数不同，其他完全一样。（文中的ERC20在创建BSC合约时就是BEP20）
+ETH网络合约、BSC网络合约Heco网络合约创建时，只有MINTER参数不同，其他完全一样。（文中的ERC20在创建BSC合约时就是BEP20，创建Heco合约是就是HRC20）
 
 ## 一 创建ERC20合约
 
@@ -50,12 +50,18 @@ ETH网络合约和BSC网络合约创建时，只有MINTER参数不同，其他�
    MINTER参数（BSC网络）
 
    BSC测试网: 0xf7915d4de86b856F3e51b894134816680bf09EEE
-   
+
    BSC主网: 0x3758AA66caD9F2606F1F501c9CB31b94b713A6d5
 
-   **注意** 在BSC网络上面注册合约跟ETH网络一样，只需要注意MINTER参数
+   MINTER参数（Heco网络）
 
-4. 点击按钮，发起创建合约交易（通过matemask确认），交易发起确认之后，通过查询交易**获取ERC20合约地址**
+   Heco测试网: 0xb339211438Dcbf3D00d7999ad009637472FC72b3
+
+   Heco主网: 0x23023c99dcede393d6d18ca7fb08541b3364fa90
+
+   **注意** 在BSC网络、Heco网络上面注册合约跟ETH网络一样，只需要注意MINTER参数
+
+4. 点击按钮，发起创建合约交易（通过matemask确认），交易发起确认之后，通过查询交易**获取ERC20（BEP20、HRC20）合约地址**
 
 ## 二 申请绑定ERC20资产
 
@@ -64,9 +70,9 @@ ETH网络合约和BSC网络合约创建时，只有MINTER参数不同，其他�
 ```
 Hi Nerve，
 
-我是XXX项目，申请注册ERC20资产至Nerve网络，信息如下
+我是XXX项目，申请注册ERC20（BEP20、HRC20）资产至Nerve网络，信息如下
 
-ERC20合约地址：0x7b6f71c8b123b38aa8099e0098bec7fbc35b8a13
+ERC20（BEP20、HRC20）合约地址：0x7b6f71c8b123b38aa8099e0098bec7fbc35b8a13
 Nerve网络资产链ID和资产ID(assetChainId, assetId): 1-8    
 ```
 
