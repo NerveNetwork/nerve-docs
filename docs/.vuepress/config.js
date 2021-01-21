@@ -191,6 +191,7 @@ module.exports = {
                                 'c_nuls_register',
                                 'g_nervetoerc20',
                                 'c_bep20_cross_erc20',
+                                'c_heterogeneous'
                                 // 'c_btc',
                                 // 'c_cross',
                             ]
