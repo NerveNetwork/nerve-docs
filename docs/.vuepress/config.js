@@ -66,7 +66,8 @@ module.exports = {
                             children: [
                                 // 'c_table',
                                 'c_nrc20',
-                                'c_nuls_register'
+                                'c_nuls_register',
+                                'c_eth_to_hecochain'
                                 // 'c_eth',
                                 // 'c_btc',
                                 // 'c_cross',
