@@ -1,5 +1,5 @@
 # NRC20 token cross chain guide
-## create MRC20 token
+## create NRC20 token
 
 First, you need to create a cross chain token on the nuls main network, such as nrc20.  
 
