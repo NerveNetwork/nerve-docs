@@ -251,6 +251,14 @@ module.exports = {
                         //     ]
                         // },
                         {
+                            title: 'Cross-Chain',
+                            collapsable:false,
+                            children: [
+                                'c_decentralized_bridge',
+                                'c_bridge_api'
+                            ]
+                        },
+                        {
                             title: 'NerveDEX',
                             collapsable:false,
                             children: [
