@@ -11,7 +11,7 @@
 
 在NULS轻钱包上使用上面的HEX码创建一个NRC20 token合约：
 
-![1](./g_NRC20/1.png)
+![1](./g_nrc20/1.png)
 
 合约发布成功之后，token创建成功，接下来需要把token注册为跨链资产。
 
@@ -87,7 +87,7 @@ nuls>>> crossassetinfo 2 56
 
 NRC20 token从主网到平行链进行跨链时，直接在NULS网页钱包转账页面进行转账，收款地址填平行链接收地址，资产类型选择跨链Token
 
-![2](./g_NRC20/2.png)
+![2](./g_nrc20/2.png)
 
 交易确认之后，通过平行链钱包查询该资产：
 
@@ -110,7 +110,7 @@ nuls>>> getbalance TNVTdTSPTXQudD2FBSefpQRkXTyhhtSjyEVAF 2 56
 
 或者直接在网页钱包中查看跨链过来的资产：
 
-![7](./g_NRC20/7.png)
+![7](./g_nrc20/7.png)
 
 这就完成了NRC20 token从主网到平行链的跨链。
 
@@ -138,7 +138,7 @@ Enter your password:**********
 
 如果接受跨链地址为主网，则在钱包显示为合约资产：
 
-![3](./g_NRC20/3.png)
+![3](./g_nrc20/3.png)
 
 如果接收地址为其他平行链地址，则查询方式与发出平行链一致（略）。
 
@@ -150,14 +150,14 @@ Enter your password:**********
 
 首先，进入[NerveDEX](https://nervedex.com/trading)，选择目录中工具下面的NervePad点击进入：
 
-![4](./g_NRC20/4.png)
+![4](./g_nrc20/4.png)
 
 进入NervePad之后，选择创建交易对页签，进入交易对创建页面，并且选择NRC20token为交易资产，完善其他信息发起创建交易对交易（创建交易对的地址需要拥有大于**200NVT**资产）：
 
-![5](./g_NRC20/5.png)
+![5](./g_nrc20/5.png)
 
 交易对创建成功之后，进入交易中心的OpenList可以查看创建成功的交易对：
 
-![6](./g_NRC20/6.png)
+![6](./g_nrc20/6.png)
 
 至此，我们成功的创建了交易对，开始交易吧！
