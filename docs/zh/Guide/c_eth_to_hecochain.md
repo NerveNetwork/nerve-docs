@@ -8,7 +8,7 @@
 
 ​	以USDT为例，进入Nerve网页钱包，选择已添加的USDT资产，选择跨链转入：
 
-![1](./g_Hecochain/1.png)
+![1](./g_hecochain/1.png)
 
 - 弹出跨链转入窗口，第一次需要先进行授权；
 - 授权成功之后再次点击跨链转入弹出跨链转入窗口
@@ -16,11 +16,11 @@
 - MetaMask确认交易之后，还需要Nerve网络确认30个区块（测试网为5）；
 - USDT资产成功跨链转入Nerve网络：
 
-![2](./g_Hecochain/2.png)
+![2](./g_hecochain/2.png)
 
 可以在交易记录中查看这笔跨链交易：
 
-![3](./g_Hecochain/3.png)
+![3](./g_hecochain/3.png)
 
 至此，我们完成了以太坊网络USDT资产跨链转入Nerve网络，接下来需要将USDT资产从Nerve网络跨链转出到Heco网络。
 
@@ -30,15 +30,15 @@
 
 ​	同样，点击资产列表中的USDT资产后面的跨链转出：
 
-![4](./g_Hecochain/4.png)
+![4](./g_hecochain/4.png)
 
 跳转到跨链转出页面，选择网络为：Heco，输入接收地址、跨链转出数量，选择手续费，然后确认交易
 
-![9](./g_Hecochain/9.png)
+![9](./g_hecochain/9.png)
 
 交易发起成功之后跳转到交易记录页面，在这个页面可以查看交易的进展或追加手续费：
 
-![10](./g_Hecochain/10.png)
+![10](./g_hecochain/10.png)
 
 交易成功之后，可以在Heco浏览器查看转入的资产，也可以在[MetaMask钱包查看Heco网络上的资产](http://docs.nerve.network/zh/Guide/c_bep20_cross_erc20.html#metamask%E6%9F%A5%E7%9C%8B%E8%B5%84%E4%BA%A7)
 
@@ -48,11 +48,11 @@
 
 ​	进入MetaMask，点击网络选择自定义RPC
 
-![5](./g_Hecochain/5.png)
+![5](./g_hecochain/5.png)
 
 跳转到自定义页面之后输入参数值保存即可
 
-![6](./g_Hecochain/6.png)
+![6](./g_hecochain/6.png)
 
 
 
@@ -88,9 +88,9 @@ RPC URL：https://http-testnet.Hecochain.com
 
 ​	资产从Nerve网络转入Heco网络之后，在MetaMask钱包可以查看，需要获取该资产在Heco网络的合约地址（通过交易记录可以在Heco浏览器上面查询），添加代币，输入合约地址即可。
 
-![7](./g_Hecochain/7.png)
+![7](./g_hecochain/7.png)
 
-![8](./g_Hecochain/8.png)
+![8](./g_hecochain/8.png)
 
 
 
