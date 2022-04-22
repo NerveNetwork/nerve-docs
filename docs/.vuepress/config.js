@@ -50,7 +50,9 @@ module.exports = {
                                 'g_docker_install',
                                 'g_eth',
                                 'g_cmd',
-                                'g_nrc_dex'
+                                'g_nrc_dex',
+                                'g_liqudity',
+                                'g_consensus'
                                 // 'g_node',
                                 // 'g_precautions',
                                 // 'g_wallet_ig',
@@ -172,7 +174,9 @@ module.exports = {
                                 'g_cmd',
                                 'g_nrc_dex',
                                 'c_lp_staking',
-                                'c_eth_to_hecochain'
+                                'c_eth_to_hecochain',
+                                'g_liqudity',
+                                'g_consensus',
                                 // 'g_node',
                                 // 'g_precautions',
                                 // 'g_wallet_ig',
