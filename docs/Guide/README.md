@@ -12,4 +12,4 @@
 ## White Paper
  The Nerve white paper is an authoritative report that indicates what Nerve ’s goal is and how we plan to achieve it.
 
-[See white paper for more](http://nervefiles.oss-us-west-1.aliyuncs.com/wp/Nerve_Whitepaper_EN.pdf)
+[See white paper for more](https://nerve-west.oss-us-west-1.aliyuncs.com/wp/Nerve_Whitepaper_EN.pdf)

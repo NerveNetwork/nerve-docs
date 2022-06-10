@@ -11,4 +11,4 @@
 ## NerveNetwork白皮书
  Nerve白皮书是一个权威性的报告，它指出了Nerve的目标是什么，以及我们打算如何实现它
 
-[查看白皮书了解更多](http://nerve-cn.oss-cn-hangzhou.aliyuncs.com/wp/Nerve_Whitepaper_ZH.pdf)
+[查看白皮书了解更多](https://nerve-west.oss-us-west-1.aliyuncs.com/wp/Nerve_Whitepaper_ZH.pdf)
