@@ -1,4 +1,4 @@
-# 快速安装节点钱包
+# 快速安装NerveNetwork节点钱包
 
 ## 准备
 
@@ -20,10 +20,10 @@
 
 #### 虚拟银行节点：
 
-**共识奖励：** 是POS收益的2倍块奖励+手续费
+**共识奖励：** 是Stake收益的2倍块奖励+手续费
 
 满足条件：
-- NVT质押排名前15位
+- NVT质押量排名前15位
 - 出块地址持有一定量异构链的资产（目前已接入的异构链为以太坊，建议持有至少0.1ETH）
 - 提供稳定的服务器设备
 - 打包交易出块和区块验证
@@ -32,10 +32,10 @@
 
 #### 共识节点：
 
-**共识奖励：** 是POS收益的1.73倍块奖励+手续费
+**共识奖励：** 是Stake收益的1.73倍块奖励+手续费
 
 满足条件：
-- NVT质押排名前35位
+- NVT质押量排名前35位
 - 提供稳定的服务器设备
 - 打包交易出块和区块验证
   
@@ -43,20 +43,20 @@
 
 #### 普通节点：
 
-**共识奖励：** 等于活期POS
+**共识奖励：** 等于灵活Stake
 
 满足条件：
-- 质押最少20W NVT
+- 质押最少200k NVT
 - 提供稳定的服务器设备
 - 参与区块广播
 
 ## Centos7系统小专区
 
-如果你的系统是**centos7**，那么恭喜你，下方的教程可以**不用继续看了**。Nerve社区的技术爱好者自发为centos7的系统编写了一个自动化脚本，执行该脚本即可自动完成docker安装，节点镜像安装/更新，启动容器，进入命令行和检查启动状态等一系列任务，做到了开箱即用
+如果你的系统是**Centos7**，那么恭喜你，下方的教程可以**不用继续看了**。我们提供了Centos7的系统编写了一个自动化脚本，执行该脚本即可自动完成Docker安装，节点镜像安装/更新，启动容器，进入命令行和检查启动状态等一系列任务，做到了开箱即用
 
 [点击此处下载脚本](https://github.com/NerveNetwork/nerve/blob/master/docker_build/nerve)
 
-## Linux下安装docker
+## Linux下安装Docker
 
 ### 使用root权限用户登录系统并查看系统内核版本
 
@@ -86,7 +86,7 @@ gpgkey=https://yum.dockerproject.org/gpg
 EOF
 ```
 
-### 安装docker
+### 安装Docker
 
 分别执行以下用例进行安装：
 
@@ -97,13 +97,13 @@ yum makecache fast
 yum -y install docker-ce
 ```
 
-### 启动docker
+### 启动Docker
 
 命令：systemctl start docker.service 
 
 ### 检查是否成功
 
-使用命令docker version 查看，出现Client和Server说明docker安装启动成功
+使用命令docker version 查看，出现Client和Server说明Docker安装启动成功
 
 ```
 [root@hope-2 /]# docker version
