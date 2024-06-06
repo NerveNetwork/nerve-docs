@@ -1,8 +1,9 @@
-# NERVE资产注册跨链到ETH网络、BSC网络、Heco网络
+# 资产部署跨链到EVM网络（ETH网络、BSC网络等EVM兼容链适用）
 
-ETH网络合约、BSC网络合约Heco网络合约创建时，只有MINTER参数不同，其他完全一样。（文中的ERC20在创建BSC合约时就是BEP20，创建Heco合约是就是HRC20）
+在EVM网络中，ETH网络合约、BSC网络合约部署时，只有MINTER参数不同，其他完全一样（文中的ERC20在创建BSC合约时就是BEP20）。
 
-## 一 创建ERC20合约
+
+## 一 部署ERC20 Token合约
 
 - **注意1**：必须使用NERVE团队提供的[ERC20合约源代码](https://github.com/NerveNetwork/contracts/blob/master/ERC20Minter.sol) `ERC20Minter.sol`
 - **注意2**：创建ERC20合约时，`decimals`必须与NERVE网络的资产的`decimals`一致
@@ -39,7 +40,7 @@ ETH网络合约、BSC网络合约Heco网络合约创建时，只有MINTER参数�
 
 2. 选择之前创建的Pklong.sol文件，一定要是ERC20Minter
 
-3. 输入参数（NAME、SYMBOL、DECIMALS、MINTER）：其中NAME和SYMBOL原则上需要跟已创建的NRC20（NERVE资产）保持一致，DECIMALS必须跟已创建的NRC20（NERVE资产）保持一致；
+3. 输入参数（NAME、SYMBOL、DECIMALS、MINTER）：其中NAME和SYMBOL原则上需要跟已创建的NERVE资产保持一致，DECIMALS必须跟已创建的NERVE资产保持一致；
 
    MINTER参数（ETH网络）
 
@@ -53,15 +54,11 @@ ETH网络合约、BSC网络合约Heco网络合约创建时，只有MINTER参数�
 
    BSC主网: 0x3758AA66caD9F2606F1F501c9CB31b94b713A6d5
 
-   MINTER参数（Heco网络）
+ 
 
-   Heco测试网: 0xb339211438Dcbf3D00d7999ad009637472FC72b3
+   **注意** 在BSC网络上面注册合约跟ETH网络一样，只需要注意MINTER参数
 
-   Heco主网: 0x23023c99dcede393d6d18ca7fb08541b3364fa90
-
-   **注意** 在BSC网络、Heco网络上面注册合约跟ETH网络一样，只需要注意MINTER参数
-
-4. 点击按钮，发起创建合约交易（通过matemask确认），交易发起确认之后，通过查询交易**获取ERC20（BEP20、HRC20）合约地址**
+4. 点击按钮，发起创建合约交易并连接MetaMask或Nabox钱包确认交易，交易发起确认之后，通过查询交易**获取ERC20（BEP20）合约地址**
 
 ## 二 申请绑定ERC20资产
 
@@ -72,10 +69,10 @@ Hi Nerve，
 
 我是XXX项目，申请注册ERC20（BEP20、HRC20）资产至Nerve网络，信息如下
 
-ERC20（BEP20、HRC20）合约地址：0x7b6f71c8b123b38aa8099e0098bec7fbc35b8a13
+ERC20（BEP20）合约地址：0x7b6f71c8b123b38aa8099e0098bec7fbc35b8a13
 Nerve网络资产链ID和资产ID(assetChainId, assetId): 1-8    
 ```
-
+**注意** NerveNetwork作为跨链的中继网络，所以首先需要将源链资产在Nerve网络中上注册，如果还没有注册该资产则没有Nerve网络资产链ID和资产ID，提供源链资产信息(链+合约地址)。
 
 ## 三 等待反馈
 
