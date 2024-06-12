@@ -13,7 +13,7 @@ NerveNetwork作为中继网络，NerveNetwork现已支持ETH/Polygon等资产跨
 注意：在使用MetaMask等EVM钱包对NerveNetwork网络的交易签名时，由于NerveNetwork不属于EVM兼容网络，我们使用了eth_sign签名方法，您可能会收到风险提示或者开启eth_sign功能的提示，请放心使用，这不会为你的资产带来风险。
 
 
-## 使用其他跨链桥产品跨链
+## 使用支持NerveNetwork的跨链桥产品跨链
 
 
 NerveBridge 和 SwapBox
