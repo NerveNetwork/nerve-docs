@@ -2,13 +2,13 @@
 
 ### NerveNetwork主网当前支持NVT_USDTN_LP、NVT-ETH_LP、NVT_BNB_LP、NVT_NULS_LP等四个LP资产的主网质押和NVT的单币质押。
 
-## 【本篇以移动端Nabox钱包添加NVT-BNB LP质押为例】
+## 【本篇以移动端Nabox钱包添加NVT_BNB LP质押为例】
 #
-**1、登录[Nabox](https://nabox.io/)钱包(https://nabox.io/)**
+**1、安装[Nabox](https://nabox.io/)钱包(https://nabox.io/)**
 
-**2、在Nerve链上准备NVT和BNB资产**
+**2、在NerveNetwork上准备NVT和BNB资产**
 
-若NVT、BNB在BSC链或其他链上，请先点击Nabox的“Bridge”，将资产跨链转账至Nerve链。
+若NVT、BNB在BSC链或其他链上，请先点击Nabox的“Bridge”，将资产跨链转账至NerveNetwork。
 
 **3、进入NerveSwap添加流动性和主网共识质押挖矿**
 
@@ -18,7 +18,7 @@
 #
 ![|602x401](https://lh3.googleusercontent.com/T1HxFBtcbdZ7N5K-irvW2eUTia6OXVv9e9OsmXWmHPOvfg21mWMF-hW4qUhyfvrfgZvH6XiAqA_jKNhfVrZnohV_x4oM5JLY-1ZM_p_gUp0iYz6sIXdx-8dWGI2NXu4wxCLTf_t3)
 #
-* 添加NVT-BNB LP流动性
+* 添加NVT_BNB LP流动性
 
 点击右侧菜单【流动性】→【增加流动性】→选择【NVT】→【输入NVT数量】→选择【BNB】→【匹配等值的BNB数量】→点击【确认】、输入密码。
 
@@ -26,7 +26,7 @@
 #
 ![|602x401](https://lh3.googleusercontent.com/1EHFgwBHpwc0VShByqdQbDTjXbuTiqk8CFG3clAUy2dkJ9_68VUBLCr5FljtcV_sfBvVS6FI2-iPXwBtqur5_IglgENT_cyuGuvFt3cndOyF9WFIwu5dYI-e3JrxWzVRjl78I5mT)
 #
-* 将NVT-BNB LP添加至主网共识Stake
+* 将NVT_BNB LP添加至主网共识Stake
 
 点击右侧菜单【共识】→【质押享收益】→选择【币种】→选择【期限】→输入【LP数量】→点击【确认】、输入密码。
 #
