@@ -180,7 +180,7 @@ docker run \
 
 **PS：请务必在服务器防火墙设置开启以上端口，否则会影响区块同步**
 
-## 第二种方式docker-compose安装启动Nerve节点钱包
+## 第二种方式Docker-Compose安装启动NerveNetwork节点钱包
 
 docker安装启动成功之后，执行下面两条命令安装docker-compose并赋予权限：
 
