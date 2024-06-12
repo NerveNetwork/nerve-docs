@@ -1,9 +1,9 @@
 
-# 如何在NerveSwap添加流动性和农场挖矿
+# 如何在NerveSwap添加流动性以及NerveFarm参与挖矿
 
 **NerveNetwork在主网中支持NULS_NVT_LP,BTC_NVT_LP,BNB_NVT_LP,USDTN_NVT_LP质押产出共识奖励**
 
-**NerveSwap支持在NerveFarm参与质押产出Farm奖励**
+**除了主网质押以外，NerveSwap支持在NerveFarm参与质押产出Farm奖励**
 
 ## 【本篇以移动端Nabox钱包添加NULS-NVT LP质押为例】
 
@@ -17,7 +17,7 @@
 ![1111|690x460](./g_liqudity/1.jpeg)
 
 
-* **添加NVT-NULS LP流动性**
+* **添加NVT_NULS LP流动性**
 
 点击右侧菜单【流动性】→【增加流动性】→选择【NVT】→【输入NVT数量】→选择【NULS】→【匹配等值的NULS数量】→点击【确认】、输入密码。
 
@@ -25,21 +25,21 @@
 #
 ![456|690x460](./g_liqudity/2.jpeg)
 #
-* **将NVT-NULS LP质押在农场挖矿**
+* **将NVT_NULS LP质押在Farm挖矿**
 
-点击右侧菜单【农场】→选择对应的农场交易对【NULS-NVT】→点击【+】→添加【LP数量】→点击【确认】、输入密码。
+点击右侧菜单【农场】→选择对应的农场交易对【NULS_NVT】→点击【+】→添加【LP数量】→点击【确认】、输入密码。
 
 ![|602x401](./g_liqudity/3.jpeg)
 
 
 **至此，你就在NerveSwap的农场里开始质押挖矿了。**
 
-### **4、如何退出农场挖矿和LP流动性**
+### **4、如何退出Farm挖矿和LP流动性**
 
 
-* **退出农场质押**
+* **退出Farm质押**
 
-点击右侧菜单【农场】→找到你质押中的交易对【NULS-NVT】，点击【-】→输入【LP退出数量】→点击【确认】、输入密码。
+点击右侧菜单【农场】→找到你质押中的交易对【NULS_NVT】，点击【-】→输入【LP退出数量】→点击【确认】、输入密码。
 
 ![100|583x500](./g_liqudity/4.jpeg)
 
@@ -50,4 +50,4 @@
 
 ![11|274x499](./g_liqudity/5.jpeg)
 
-农场质押和LP流动性退出后，资产会显示在Nabox钱包的Nerve链地址上。
+农场质押和LP流动性退出后，资产会显示在Nabox钱包的NerveNetwork地址上。
