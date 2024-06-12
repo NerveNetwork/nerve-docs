@@ -4,7 +4,7 @@
 
 ### 服务器硬件配置
 
-**建立Nerve节点的服务器不低于如下配置：**
+**建立NerveNetwirk节点的服务器不低于如下配置：**
 
 | CPU         | 内存 | 硬盘     | 宽带    |
 | ----------- | ---- | -------- | ------- |
@@ -142,15 +142,15 @@ Server: Docker Engine - Community
 
 命令：sudo systemctl enable docker
 
-## Windows下安装docker
+## Windows下安装Docker
 
 [参考链接](https://docs.microsoft.com/zh-cn/virtualization/windowscontainers/quick-start/set-up-environment?tabs=Windows-Server)
 
 
 
-**PS：目前提供两种方式启动Nerve节点钱包，第一种是使用命令直接启动，另一种是使用docker-compose启动。**
+**PS：目前提供两种方式启动NerveNetwork节点钱包，第一种是使用命令直接启动，另一种是使用docker-compose启动。**
 
-## 第一种方式启动Nerve节点钱包
+## 第一种方式启动NerveNetwork节点钱包
 
 节点钱包带有主链运行所需的最基础功能，并包括nerve-api（http的开发接口）模块，用户只能通过命令行与钱包进行交互。
 
@@ -168,9 +168,9 @@ docker run \
        nervenetwork/nerve-wallet-node:beta-1.0.6
 ```
 
-**17001 Nerve链协议通信端口（必选）**
+**17001 NerveNetwork协议通信端口（必选）**
 
-**17002 Nerve链跨链协议端口（必选）**
+**17002 NerveNetwork跨链协议端口（必选）**
 
 17004 http api接口使用端口（可选）
 
@@ -211,9 +211,9 @@ services:
       TIME_ZONE: Asia/Shanghai
 ```
 
-**17001 Nerve链协议通信端口（必选）**
+**17001 NerveNetwork协议通信端口（必选）**
 
-**17002 Nerve链跨链协议端口（必选）**
+**17002 NerveNetwork跨链协议端口（必选）**
 
 17004 http api接口使用端口（可选）
 
@@ -269,7 +269,7 @@ docker restart nerve-wallet
 
 ## 
 
-## Nerve节点钱包更新
+## NerveNetwork节点钱包更新
 
 首先在服务器上停止已运行的镜像
 
@@ -293,5 +293,5 @@ CONTAINER ID        IMAGE                    COMMAND                  CREATED   
 docker pull nervenetwork/nerve-wallet-node:beta-1.0.0
 ```
 
-再次启动nerve节点钱包即可，根据不同的启动方法选择重复第一种或第二种启动方法（如果需要清数据，请删除root目录下的data、logs目录）
+再次启动nerveNetwork节点钱包即可，根据不同的启动方法选择重复第一种或第二种启动方法（如果需要清数据，请删除root目录下的data、logs目录）
 
