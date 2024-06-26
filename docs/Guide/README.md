@@ -1,15 +1,17 @@
-# What is Nerve
-## Why do we develop Nerve
- Developing a general cross-chain interaction protocol. Through the standard protocol conversion layer of Nerve, we can match the general interface standard for development, access more mainstream digital assets, and form a general cross-chain interaction protocol. By following the general interface standard to develop a module and through the verification and upgrading of virtual bank and consensus node, you can load the cross-chain interaction protocol of Nerve.   
- 
- Providing a new intelligent lightning network for mainstream digital assets such as BTC. Bitcoin has a long confirmation time and a high transfer fee. Through Nerve, you can initiate a fast transaction with low handling fee , and it can realize second level confirmation on Nerve. Most mainstream digital assets such as BTC do not have smart contracts, thus decentralized mortgage lending, decentralized exchange and other Defi applications cannot be directly implemented in their chains. While more application scenarios or ecosystem can be easily realized through Nerve.  
- 
- Opening the blockchain closed-loop of mainstream digital assets and enabling quick transfer to each blockchain of the NULS ecosystem. Any blockchain is like a local area network (LAN). The assets on the chain can only circulate in the closed-loop. NULS is an infrastructure for building the blockchain and the blockchain built through NULS modules can realize asset circulation, with the only need to configure cross-chain modules. The goal of Nerve is to connect LANs of other network with different structure types, such as BTC/ETH, etc.  
- 
- The multi-asset, open and transparent value interaction platform provides the underlying support for the Defi application ecosystem. We store digital assets such as BTC into centralized platforms, such as exchanges, centralized financial wallets, etc., and then they can arbitrarily misappropriate your assets. These platforms are black boxes that cannot ensure the safety of your assets. While in Nerve, you can build an asset trading platform, where all data is open and transparent. Your assets are controlled by multiple signatures through cross-chain virtual banks to ensure the security of assets.
- 
+# What is NerveNetwork?
 
-## White Paper
- The Nerve white paper is an authoritative report that indicates what Nerve ’s goal is and how we plan to achieve it.
+NerveNetwork aims to connect all isolated blockchains and establish a cross-chain asset exchange network, providing all necessary underlying support for the DeFi ecosystem. Let every digital asset holder experience a truly safe, free and transparent DeFi service.
 
-[See white paper for more](https://nerve-west.oss-us-west-1.aliyuncs.com/wp/Nerve_Whitepaper_EN.pdf)
+## The Significance of NerveNetwork
+NerveNetwork establishes a universal blockchain cross-chain interaction protocol. Through this standardized protocol conversion layer, developers can match the universal interface standards, integrating more mainstream digital assets and forming a set of universal cross-chain interaction protocols. By following the standard interface to develop a module, which is then validated and upgraded by virtual banks and consensus nodes, it can be integrated into the NerveNetwork cross-chain interaction protocol.
+
+NerveNetwork provides a new intelligent lightning network for mainstream digital assets like BTC. Bitcoin transactions have long confirmation times and high fees, but through NerveNetwork, users can initiate quick transactions with low fees, achieving second-level confirmations. Most mainstream digital assets, such as BTC, lack smart contracts, making decentralized applications like collateralized lending and decentralized exchanges infeasible on their native chains. NerveNetwork facilitates these applications and ecosystems easily.
+
+NerveNetwork opens the closed-loop blockchain of mainstream digital assets, allowing quick transfer to various blockchains within the NULS ecosystem. Each blockchain is like a local area network where assets can only circulate within the closed loop. NULS, as a blockchain infrastructure builder, allows for asset circulation across blockchains built using its modules by simply configuring the cross-chain module. NerveNetwork aims to connect other network structure types of local area networks, such as BTC/ETH.
+
+NerveNetwork offers a multi-asset, open, and transparent value interaction platform, providing underlying support for the DeFi application ecosystem. Centralized platforms, like exchanges and centralized financial wallets, can misuse your assets, creating a black box where the safety of your assets cannot be guaranteed. On NerveNetwork, an asset trading platform can be built where all data is open and transparent. Your assets are controlled through multi-signature by the cross-chain virtual bank, ensuring their safety.
+
+## NerveNetwork Whitepaper
+The NerveNetwork whitepaper is an authoritative document that outlines the goals of NerveNetwork and our plans to achieve them.
+
+[Read the whitepaper to learn more](https://nerve-west.oss-us-west-1.aliyuncs.com/wp/Nerve_Whitepaper_EN.pdf)
